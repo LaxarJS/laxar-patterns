@@ -58,7 +58,7 @@ var require = {
       text: 'bower_components/requirejs-plugins/lib/text',
       requirejs: 'bower_components/requirejs/require',
       jquery: 'bower_components/jquery/dist/jquery',
-      q: 'bower_components/q/q',
+      q_mock: 'bower_components/q_mock/q',
       json: 'bower_components/requirejs-plugins/src/json',
       'angular-route': 'bower_components/angular-route/angular-route',
       'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize',

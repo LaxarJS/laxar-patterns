@@ -41,7 +41,6 @@ module.exports = function (grunt) {
                   'angular',
                   'jquery',
                   'underscore',
-                  'q',
                   'laxar'
                ],
                name: pkg.name,

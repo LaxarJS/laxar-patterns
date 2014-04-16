@@ -1,10 +1,10 @@
 {
    "name": "laxar_patterns",
-   "version": "0.0.0",
+   "version": "0.9.0-pre",
    "description": "Utilities to implement standard event patterns in LaxarJS widgets",
    "authors": [],
    "license": "MIT",
-   "main": "dist/laxar_patterns.js",
+   "main": "laxar_patterns.js",
    "ignore": [
       ".*",
       "Gruntfile.js",
@@ -13,7 +13,7 @@
       "docs"
    ],
    "dependencies": {
-      "laxar": "LaxarJS/laxar#*"
+      "laxar": "LaxarJS/laxar#0.x"
    },
    "devDependencies": {
       "es5-shim": "es-shims/es5-shim#2.3.x",

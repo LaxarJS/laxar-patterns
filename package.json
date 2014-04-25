@@ -25,7 +25,7 @@
       "grunt-karma": "~0.8.2",
 
       "karma": "~0.12.1",
-      "karma-laxar": "git+ssh://git/git/incubator/2014/oss/karma-laxar.git#master",
+      "karma-laxar": "LaxarJS/karma-laxar",
       "karma-junit-reporter": "~0.2.1",
       "karma-phantomjs-launcher": "~0.1.2"
    }

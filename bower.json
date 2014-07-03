@@ -1,6 +1,6 @@
 {
    "name": "laxar_patterns",
-   "version": "0.10.0-pre",
+   "version": "0.10.0",
    "description": "Utilities to implement standard event patterns in LaxarJS widgets",
    "authors": [],
    "license": "MIT",

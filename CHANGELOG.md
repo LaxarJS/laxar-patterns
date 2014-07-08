@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#5](https://github.com/LaxarJS/laxar_patterns/issues/5): Fixed jshint violation
+
 ## v0.10.0
 
 - [#4](https://github.com/LaxarJS/laxar_patterns/issues/4): Allowed to keep receiving updates from `whenAllWereReplaced` after initial replacement (set watch option to true).

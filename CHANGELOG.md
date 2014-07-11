@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+## v0.10.1
+
 - [#5](https://github.com/LaxarJS/laxar_patterns/issues/5): Fixed jshint violation
 
 ## v0.10.0

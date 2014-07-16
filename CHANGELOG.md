@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#9](https://github.com/LaxarJS/laxar_patterns/issues/9): jshintrc: disabled enforcement of dot notation for object property access.
 - [#5](https://github.com/LaxarJS/laxar_patterns/issues/5): Fixed jshint violation
 
 ## v0.10.0

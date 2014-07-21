@@ -59,6 +59,8 @@ var require = {
       requirejs: 'bower_components/requirejs/require',
       jquery: 'bower_components/jquery/dist/jquery',
       q_mock: 'bower_components/q_mock/q',
+      jjv: 'bower_components/jjv/lib/jjv',
+      jjve: 'bower_components/jjve/jjve',
       json: 'bower_components/requirejs-plugins/src/json',
       'angular-route': 'bower_components/angular-route/angular-route',
       'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize',

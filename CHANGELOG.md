@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#8](https://github.com/LaxarJS/laxar_patterns/issues/8): resources: added method `wereAllReplaced` to find out if all registered resources have been replaced
+  NEW FEATURE: see ticket for details
 - [#10](https://github.com/LaxarJS/laxar_patterns/issues/10): errors: implemented publisher for the didEncounterError event
   NEW FEATURE: see ticket for details
 - [#7](https://github.com/LaxarJS/laxar_patterns/issues/7): resources: fixed null-pointer when handling `isOptional`

@@ -3,6 +3,7 @@
 ## Last Changes
 
 - [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for json patch in didUpdate events.
+  NEW FEATURE: see ticket for details
 - [#13](https://github.com/LaxarJS/laxar_patterns/issues/13): Remove some obsolete NPM `devDependencies`.
 - [#11](https://github.com/LaxarJS/laxar_patterns/issues/11): added missing require path mapping for jjv and jjve.
 

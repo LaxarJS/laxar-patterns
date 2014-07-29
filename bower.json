@@ -13,7 +13,8 @@
       "docs"
    ],
    "dependencies": {
-      "laxar": "LaxarJS/laxar#0.x"
+      "laxar": "LaxarJS/laxar#0.x",
+      "fast-json-patch": "Starcounter-Jack/JSON-Patch#0.3.x"
    },
    "devDependencies": {
       "es5-shim": "es-shims/es5-shim#2.3.x",

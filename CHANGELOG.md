@@ -1,11 +1,10 @@
 # Changelog
 
 ## Last Changes
-
+- [#13](https://github.com/LaxarJS/laxar_patterns/issues/13): Remove some obsolete NPM `devDependencies`.
 - [#11](https://github.com/LaxarJS/laxar_patterns/issues/11): added missing require path mapping for jjv and jjve.
 
 ## v0.11.0
-
 - [#8](https://github.com/LaxarJS/laxar_patterns/issues/8): resources: added method `wereAllReplaced` to find out if all registered resources have been replaced
   NEW FEATURE: see ticket for details
 - [#10](https://github.com/LaxarJS/laxar_patterns/issues/10): errors: implemented publisher for the didEncounterError event
@@ -16,7 +15,6 @@
 - [#5](https://github.com/LaxarJS/laxar_patterns/issues/5): Fixed jshint violation
 
 ## v0.10.0
-
 - [#4](https://github.com/LaxarJS/laxar_patterns/issues/4): Allowed to keep receiving updates from `whenAllWereReplaced` after initial replacement (set watch option to true).
 - [#2](https://github.com/LaxarJS/laxar_patterns/issues/2): Gracefully handle optional resources, fixed resource spec tests.
 - [#3](https://github.com/LaxarJS/laxar_patterns/issues/3): `patches.create`: exclude properties starting with `$$`.

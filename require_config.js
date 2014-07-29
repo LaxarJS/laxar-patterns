@@ -38,6 +38,9 @@ var require = {
             return angular;
          }
       },
+      'json-patch': {
+         exports: 'jsonpatch'
+      },
       underscore: {
          exports: '_',
          init: function () {
@@ -59,6 +62,7 @@ var require = {
       requirejs: 'bower_components/requirejs/require',
       jquery: 'bower_components/jquery/dist/jquery',
       q_mock: 'bower_components/q_mock/q',
+      'json-patch': 'bower_components/fast-json-patch/src/json-patch-duplex',
       jjv: 'bower_components/jjv/lib/jjv',
       jjve: 'bower_components/jjve/jjve',
       json: 'bower_components/requirejs-plugins/src/json',

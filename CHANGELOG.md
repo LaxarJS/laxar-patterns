@@ -1,6 +1,7 @@
 # Changelog
 
 ## Last Changes
+- [#13](https://github.com/LaxarJS/laxar_patterns/issues/13): Remove some obsolete NPM `devDependencies`.
 
 ## v0.11.1
 - [#11](https://github.com/LaxarJS/laxar_patterns/issues/11): added missing require path mapping for jjv and jjve.

@@ -117,7 +117,7 @@ module.exports = function (grunt) {
    grunt.loadNpmTasks('grunt-contrib-requirejs');
    grunt.loadNpmTasks('grunt-contrib-watch');
    grunt.loadNpmTasks('grunt-bower-requirejs');
-   grunt.loadNpmTasks('grunt-karma');
+   grunt.loadNpmTasks('grunt-laxar');
    grunt.loadNpmTasks('grunt-markdown');
 
    grunt.registerTask('build', ['requirejs']);

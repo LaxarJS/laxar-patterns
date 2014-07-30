@@ -2,10 +2,13 @@
 
 ## Last Changes
 
-- [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for json patch in didUpdate events.
+## v0.12.0
+
+- [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for JSON patch in didUpdate events.
   NEW FEATURE: see ticket for details
 - [#13](https://github.com/LaxarJS/laxar_patterns/issues/13): Remove some obsolete NPM `devDependencies`.
 - [#11](https://github.com/LaxarJS/laxar_patterns/issues/11): added missing require path mapping for jjv and jjve.
+
 
 ## v0.11.0
 
@@ -17,6 +20,7 @@
 - [#6](https://github.com/LaxarJS/laxar_patterns/issues/6): i18n: fixed localize to not use fallback for non-i18n values.
 - [#9](https://github.com/LaxarJS/laxar_patterns/issues/9): jshintrc: disabled enforcement of dot notation for object property access.
 - [#5](https://github.com/LaxarJS/laxar_patterns/issues/5): Fixed jshint violation
+
 
 ## v0.10.0
 

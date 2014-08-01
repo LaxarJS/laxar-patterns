@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#14](https://github.com/LaxarJS/laxar_patterns/issues/14): temporarily switched to the LaxarJS fork of json patch.
+
+
 ## v0.12.0
 
 - [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for JSON patch in didUpdate events.

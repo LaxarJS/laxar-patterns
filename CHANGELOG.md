@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#16](https://github.com/LaxarJS/laxar_patterns/issues/16): don't try to load `widget.json` in laxar_patterns specs.
 - [#14](https://github.com/LaxarJS/laxar_patterns/issues/14): temporarily switched to the LaxarJS fork of json patch.
 - [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for JSON patch in didUpdate events.
   NEW FEATURE: see ticket for details

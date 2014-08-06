@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#15](https://github.com/LaxarJS/laxar_patterns/issues/15): json: added helpers to work with json pointer (rfc-6901) and json patch (rfc-6902)
 - [#14](https://github.com/LaxarJS/laxar_patterns/issues/14): temporarily switched to the LaxarJS fork of json patch.
 - [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for JSON patch in didUpdate events.
   NEW FEATURE: see ticket for details

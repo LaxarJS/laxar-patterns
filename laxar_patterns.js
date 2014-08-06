@@ -8,10 +8,11 @@ define( [
    './lib/errors',
    './lib/flags',
    './lib/i18n',
+   './lib/json',
    './lib/patches',
    './lib/validation',
    './lib/resources'
-], function( actions, errors, flags, i18n, patches, validation, resources ) {
+], function( actions, errors, flags, i18n, json, patches, validation, resources ) {
    'use strict';
 
    return {
@@ -19,6 +20,7 @@ define( [
       errors: errors,
       flags: flags,
       i18n: i18n,
+      json: json,
       patches: patches,
       resources: resources,
       validation: validation

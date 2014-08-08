@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#17](https://github.com/LaxarJS/laxar_patterns/issues/17): replace and update publishers now return a promise.
+
+
 ## v0.12.1
 
 - [#16](https://github.com/LaxarJS/laxar_patterns/issues/16): don't try to load `widget.json` in laxar_patterns specs.

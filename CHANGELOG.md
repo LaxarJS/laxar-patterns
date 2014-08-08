@@ -2,10 +2,16 @@
 
 ## Last Changes
 
+## v0.13.0
+
 - [#17](https://github.com/LaxarJS/laxar_patterns/issues/17): replace and update publishers now return a promise.
 - [#16](https://github.com/LaxarJS/laxar_patterns/issues/16): don't try to load `widget.json` in laxar_patterns specs.
 - [#15](https://github.com/LaxarJS/laxar_patterns/issues/15): json: added helpers to work with json pointer (rfc-6901) and json patch (rfc-6902)
 - [#14](https://github.com/LaxarJS/laxar_patterns/issues/14): temporarily switched to the LaxarJS fork of json patch.
+
+
+## v0.12.0
+
 - [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for JSON patch in didUpdate events.
   NEW FEATURE: see ticket for details
 - [#13](https://github.com/LaxarJS/laxar_patterns/issues/13): Remove some obsolete NPM `devDependencies`.

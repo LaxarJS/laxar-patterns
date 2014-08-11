@@ -10,9 +10,10 @@ define( [
    './lib/i18n',
    './lib/json',
    './lib/patches',
+   './lib/resources',
    './lib/validation',
-   './lib/resources'
-], function( actions, errors, flags, i18n, json, patches, validation, resources ) {
+   './lib/visibility'
+], function( actions, errors, flags, i18n, json, patches, resources, validation, visibility ) {
    'use strict';
 
    return {
@@ -23,7 +24,8 @@ define( [
       json: json,
       patches: patches,
       resources: resources,
-      validation: validation
+      validation: validation,
+      visibility: visibility
    };
 
 } );

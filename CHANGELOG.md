@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#19](https://github.com/LaxarJS/laxar_patterns/issues/19): tests: make sure PhantomJS is installed properly, before running spec tests.
 - [#18](https://github.com/LaxarJS/laxar_patterns/issues/18): added support for visibility events
   NEW FEATURE: see ticket for details
 

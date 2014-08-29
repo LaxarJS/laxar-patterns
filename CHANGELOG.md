@@ -2,6 +2,10 @@
 
 ## Last Changes
 
+- [#18](https://github.com/LaxarJS/laxar_patterns/issues/18): added support for visibility events
+  NEW FEATURE: see ticket for details
+
+
 ## v0.13.0
 
 - [#17](https://github.com/LaxarJS/laxar_patterns/issues/17): replace and update publishers now return a promise.

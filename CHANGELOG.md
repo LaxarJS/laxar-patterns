@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#17](https://github.com/LaxarJS/laxar_patterns/issues/19): tests: make sure PhantomJS is installed properly, before running spec tests.
+
 ## v0.13.0
 
 - [#17](https://github.com/LaxarJS/laxar_patterns/issues/17): replace and update publishers now return a promise.

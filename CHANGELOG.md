@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#20](https://github.com/LaxarJS/laxar_patterns/issues/20): fixed wrongly global assert in jshintrc.
+
 
 ## v0.14.0
 

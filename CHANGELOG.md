@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+## v0.15.0
+
 - [#21](https://github.com/LaxarJS/laxar_patterns/issues/21): resources: added deliverToSender option to event publishers.
 - [#20](https://github.com/LaxarJS/laxar_patterns/issues/20): fixed wrongly global assert in jshintrc.
 

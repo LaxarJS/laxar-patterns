@@ -2,6 +2,10 @@
 
 ## Last Changes
 
+- [#22](https://github.com/LaxarJS/laxar_patterns/issues/22): actions: implemented action handler and publisher convenience.
+  NEW FEATURE: see ticket for details
+
+
 ## v0.15.0
 
 - [#21](https://github.com/LaxarJS/laxar_patterns/issues/21): resources: added deliverToSender option to event publishers.

@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+## v0.16.0
+
 - [#22](https://github.com/LaxarJS/laxar_patterns/issues/22): actions: implemented action handler and publisher convenience.
   NEW FEATURE: see ticket for details
 

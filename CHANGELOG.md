@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#23](https://github.com/LaxarJS/laxar_patterns/issues/23): actions: added promise support for asynchronous handlers.
+
+
 ## v0.16.0
 
 - [#22](https://github.com/LaxarJS/laxar_patterns/issues/22): actions: implemented action handler and publisher convenience.

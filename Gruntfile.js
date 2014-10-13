@@ -52,24 +52,46 @@ module.exports = function (grunt) {
          options: {
             basePath: '.',
             frameworks: ['laxar'],
-            reporters: ['junit', 'progress'],
+            reporters: ['junit', 'coverage', 'progress'],
             browsers: ['PhantomJS'],
-            singleRun: true
+            singleRun: true,
+            preprocessors: {
+               'lib/**/*.js': 'coverage'
+            },
+            proxies: {},
+            files: [
+               { pattern: 'bower_components/**', included: false },
+               { pattern: 'lib/**', included: false },
+               { pattern: '*.js', included: false }
+            ]
          },
          laxar_patterns: {
             options: {
-               files: [
-                  { pattern: 'bower_components/**', included: false },
-                  { pattern: 'lib/**', included: false }
-               ],
                laxar: {
                   specRunner: 'lib/spec/spec_runner.js',
                   requireConfig: src.require
                },
                junitReporter: {
-                  outputFile: 'lib/junit.xml'
+                  outputFile: 'lib/spec/test-results.xml'
+               },
+               coverageReporter: {
+                  type: 'lcovonly',
+                  dir: 'lib/spec',
+                  file: 'lcov.info'
                }
             }
+         }
+      },
+      test_results_merger: {
+         laxar: {
+            src: [ 'lib/spec/test-results.xml' ],
+            dest: 'test-results.xml'
+         }
+      },
+      lcov_info_merger: {
+         laxar: {
+            src: [ 'lib/spec/*/lcov.info' ],
+            dest: 'lcov.info'
          }
       },
       markdown: {
@@ -121,6 +143,6 @@ module.exports = function (grunt) {
    grunt.loadNpmTasks('grunt-markdown');
 
    grunt.registerTask('build', ['requirejs']);
-   grunt.registerTask('test', ['karma', 'jshint']);
+   grunt.registerTask('test', ['karma', 'test_results_merger', 'lcov_info_merger', 'jshint']);
    grunt.registerTask('default', ['build', 'test']);
 };

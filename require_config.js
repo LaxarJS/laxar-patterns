@@ -40,13 +40,6 @@ var require = {
       },
       'json-patch': {
          exports: 'jsonpatch'
-      },
-      underscore: {
-         exports: '_',
-         init: function () {
-            'use strict';
-            return this._.noConflict();
-         }
       }
    },
    packages: [
@@ -57,7 +50,6 @@ var require = {
       }
    ],
    paths: {
-      underscore: 'bower_components/underscore/underscore',
       text: 'bower_components/requirejs-plugins/lib/text',
       requirejs: 'bower_components/requirejs/require',
       jquery: 'bower_components/jquery/dist/jquery',

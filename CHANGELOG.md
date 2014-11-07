@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v0.18.0
+
 - [#26](https://github.com/LaxarJS/laxar_patterns/issues/26): documentation: overview, resource/action/flag/error patterns
 - [#24](https://github.com/LaxarJS/laxar_patterns/issues/24): refactoring: use `laxar.string` rather than `laxar.text`
 

@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#28](https://github.com/LaxarJS/laxar_patterns/issues/28): visibility: use publishAndGatherReplies in request publishers
+
 
 ## v0.18.0
 

@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#27](https://github.com/LaxarJS/laxar_patterns/issues/27): resources: removed handling of didUpdate vents with deprecated event payload.
+    + **BREAKING CHANGE:** see ticket for details
+
 
 ## v0.18.0
 

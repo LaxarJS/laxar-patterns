@@ -40,7 +40,6 @@ module.exports = function (grunt) {
                exclude: [
                   'angular',
                   'jquery',
-                  'underscore',
                   'laxar'
                ],
                name: pkg.name,

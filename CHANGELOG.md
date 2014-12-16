@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#30](https://github.com/LaxarJS/laxar_patterns/issues/30): resources: allow paths for `isSame` comparison
 - [#28](https://github.com/LaxarJS/laxar_patterns/issues/28): visibility: use publishAndGatherReplies in request publishers
 
 

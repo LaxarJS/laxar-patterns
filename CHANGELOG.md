@@ -2,10 +2,14 @@
 
 ## Last Changes
 
-- [#30](https://github.com/LaxarJS/laxar_patterns/issues/30): resources: allow paths for `isSame` comparison
 - [#25](https://github.com/LaxarJS/laxar_patterns/issues/25): footprint: removed underscore dependency
 - [#27](https://github.com/LaxarJS/laxar_patterns/issues/27): resources: removed handling of didUpdate vents with deprecated event payload.
     + **BREAKING CHANGE:** see ticket for details
+
+
+## v0.19.0
+
+- [#30](https://github.com/LaxarJS/laxar_patterns/issues/30): resources: allow paths for `isSame` comparison
 - [#28](https://github.com/LaxarJS/laxar_patterns/issues/28): visibility: use publishAndGatherReplies in request publishers
 
 
@@ -23,7 +27,7 @@
 ## v0.16.0
 
 - [#22](https://github.com/LaxarJS/laxar_patterns/issues/22): actions: implemented action handler and publisher convenience.
-  NEW FEATURE: see ticket for details
+    + NEW FEATURE: see ticket for details
 
 
 ## v0.15.0
@@ -36,7 +40,7 @@
 
 - [#19](https://github.com/LaxarJS/laxar_patterns/issues/19): tests: make sure PhantomJS is installed properly, before running spec tests.
 - [#18](https://github.com/LaxarJS/laxar_patterns/issues/18): added support for visibility events
-  NEW FEATURE: see ticket for details
+    + NEW FEATURE: see ticket for details
 
 
 ## v0.13.0
@@ -50,7 +54,7 @@
 ## v0.12.0
 
 - [#12](https://github.com/LaxarJS/laxar_patterns/issues/12): added support for JSON patch in didUpdate events.
-  NEW FEATURE: see ticket for details
+    + NEW FEATURE: see ticket for details
 - [#13](https://github.com/LaxarJS/laxar_patterns/issues/13): Remove some obsolete NPM `devDependencies`.
 - [#11](https://github.com/LaxarJS/laxar_patterns/issues/11): added missing require path mapping for jjv and jjve.
 
@@ -58,9 +62,9 @@
 ## v0.11.0
 
 - [#8](https://github.com/LaxarJS/laxar_patterns/issues/8): resources: added method `wereAllReplaced` to find out if all registered resources have been replaced
-  NEW FEATURE: see ticket for details
+    + NEW FEATURE: see ticket for details
 - [#10](https://github.com/LaxarJS/laxar_patterns/issues/10): errors: implemented publisher for the didEncounterError event
-  NEW FEATURE: see ticket for details
+    + NEW FEATURE: see ticket for details
 - [#7](https://github.com/LaxarJS/laxar_patterns/issues/7): resources: fixed null-pointer when handling `isOptional`
 - [#6](https://github.com/LaxarJS/laxar_patterns/issues/6): i18n: fixed localize to not use fallback for non-i18n values.
 - [#9](https://github.com/LaxarJS/laxar_patterns/issues/9): jshintrc: disabled enforcement of dot notation for object property access.

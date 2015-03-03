@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#32](https://github.com/LaxarJS/laxar_patterns/issues/32): resources: updatePublisher should ignore empty updates
+    + NEW FEATURE: see ticket for details
+
 
 ## v0.19.0
 

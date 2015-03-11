@@ -21,7 +21,7 @@ If no state as been received yet for a single flag, consumers should consider it
 Event name                         | Payload Attribute  | Type    | Description
 -----------------------------------|--------------------|---------|------------------------------------------------------------
 `didChangeFlag.{flag}.{state}`     |                    |         | _published by any widget to communicate a boolean state_
-                                   | `action`           | string  | the topic through which flag consumer and producers are connected (used in the payload _as well as_ in the event name)
+                                   | `flag`             | string  | the topic through which flag consumer and producers are connected (used in the payload _as well as_ in the event name)
                                    | `state`            | boolean | the new state for the flag
 
 Because the flag `state` is encoded in the event name as `"true"` or `"false"`, subscribers can use pattern matching to create two different subscriptions.

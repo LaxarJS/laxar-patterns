@@ -13,7 +13,7 @@
       "docs"
    ],
    "dependencies": {
-      "laxar": "LaxarJS/laxar#1.0.0-alpha.0",
+      "laxar": "LaxarJS/laxar#^1.0.0-alpha.1",
       "fast-json-patch": "LaxarJS/JSON-Patch#v0.3.8-plus-1-commit"
    },
    "devDependencies": {

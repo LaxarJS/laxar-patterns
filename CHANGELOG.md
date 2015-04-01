@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#34](https://github.com/LaxarJS/laxar_patterns/issues/34): actions. removed support for done callback in action handlers.
+    + **BREAKING CHANGE:** see ticket for details
 - [#33](https://github.com/LaxarJS/laxar_patterns/issues/33): actions: added support for event objects in action handlers
     + NEW FEATURE: see ticket for details
 - [#31](https://github.com/LaxarJS/laxar_patterns/issues/31): documentation: fixed wrong payload attribute in flags.md

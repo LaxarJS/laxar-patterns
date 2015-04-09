@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#36](https://github.com/LaxarJS/laxar_patterns/issues/36): actions. fixed minification bug due to missing strict DI.
 - [#29](https://github.com/LaxarJS/laxar_patterns/issues/29): resources: set `resources` as fixed bucket name.
     + **BREAKING CHANGE:** see ticket for details
 - [#34](https://github.com/LaxarJS/laxar_patterns/issues/34): actions. removed support for done callback in action handlers.

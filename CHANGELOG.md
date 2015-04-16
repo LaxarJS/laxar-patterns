@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v0.22.0
+
 - [#35](https://github.com/LaxarJS/laxar_patterns/issues/35): cleanup: removed dist-task fragments from grunt- and package configuration
 - [#31](https://github.com/LaxarJS/laxar_patterns/issues/31): documentation: fixed wrong payload attribute in flags.md
 - [#32](https://github.com/LaxarJS/laxar_patterns/issues/32): resources: updatePublisher should ignore empty updates

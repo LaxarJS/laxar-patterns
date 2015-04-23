@@ -14,7 +14,7 @@
    ],
    "dependencies": {
       "laxar": "LaxarJS/laxar#^1.0.0-alpha.1",
-      "fast-json-patch": "LaxarJS/JSON-Patch#v0.3.8-plus-1-commit"
+      "fast-json-patch": "Starcounter-Jack/JSON-Patch#~0.5.2"
    },
    "devDependencies": {
       "es5-shim": "es-shims/es5-shim#2.3.x",

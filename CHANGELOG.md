@@ -3,7 +3,7 @@
 ## Last Changes
 
 
-## v0.22.0
+## v0.20.0
 
 - [#35](https://github.com/LaxarJS/laxar_patterns/issues/35): cleanup: removed dist-task fragments from grunt- and package configuration
 - [#31](https://github.com/LaxarJS/laxar_patterns/issues/31): documentation: fixed wrong payload attribute in flags.md

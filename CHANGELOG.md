@@ -17,6 +17,10 @@
 - [#25](https://github.com/LaxarJS/laxar_patterns/issues/25): footprint: removed underscore dependency
 - [#27](https://github.com/LaxarJS/laxar_patterns/issues/27): resources: removed handling of didUpdate events with deprecated event payload.
     + **BREAKING CHANGE:** see ticket for details
+
+
+## v0.20.0
+
 - [#35](https://github.com/LaxarJS/laxar_patterns/issues/35): cleanup: removed dist-task fragments from grunt- and package configuration
 - [#31](https://github.com/LaxarJS/laxar_patterns/issues/31): documentation: fixed wrong payload attribute in flags.md
 - [#32](https://github.com/LaxarJS/laxar_patterns/issues/32): resources: updatePublisher should ignore empty updates

@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.0.0-alpha.1
+
 - [#37](https://github.com/LaxarJS/laxar_patterns/issues/37): json: updated fast-json-patch to latest official release.
 
 

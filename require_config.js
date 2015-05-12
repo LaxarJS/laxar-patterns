@@ -1,38 +1,27 @@
 var require = {
    baseUrl: './',
-   deps: [
-      'bower_components/es5-shim/es5-shim',
-      'bower_components/modernizr/modernizr'
-   ],
+   deps: [],
    shim: {
       angular: {
-         deps: [
-            'jquery'
-         ],
+         deps: [],
          exports: 'angular'
       },
       'angular-mocks': {
-         deps: [
-            'angular'
-         ],
+         deps: [ 'angular' ],
          init: function ( angular ) {
             'use strict';
             return angular.mock;
          }
       },
       'angular-route': {
-         deps: [
-            'angular'
-         ],
+         deps: [ 'angular' ],
          init: function ( angular ) {
             'use strict';
             return angular.route;
          }
       },
       'angular-sanitize': {
-         deps: [
-            'angular'
-         ],
+         deps: [ 'angular' ],
          init: function ( angular ) {
             'use strict';
             return angular;
@@ -50,18 +39,22 @@ var require = {
       }
    ],
    paths: {
-      text: 'bower_components/requirejs-plugins/lib/text',
       requirejs: 'bower_components/requirejs/require',
-      jquery: 'bower_components/jquery/dist/jquery',
-      q_mock: 'bower_components/q_mock/q',
+      text: 'bower_components/requirejs-plugins/lib/text',
+      json: 'bower_components/requirejs-plugins/src/json',
       'json-patch': 'bower_components/fast-json-patch/src/json-patch-duplex',
+
+      // LaxarJS dependencies:
       jjv: 'bower_components/jjv/lib/jjv',
       jjve: 'bower_components/jjve/jjve',
-      json: 'bower_components/requirejs-plugins/src/json',
       'angular-route': 'bower_components/angular-route/angular-route',
       'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize',
       'angular-mocks': 'bower_components/angular-mocks/angular-mocks',
       angular: 'bower_components/angular/angular',
-      jasmine: 'bower_components/jasmine/lib/jasmine-core/jasmine'
+
+      // testing:
+      jasmine: 'bower_components/jasmine/lib/jasmine-core/jasmine',
+      q_mock: 'bower_components/q_mock/q',
+      'jquery': 'bower_components/jquery/dist/jquery'
    }
 };

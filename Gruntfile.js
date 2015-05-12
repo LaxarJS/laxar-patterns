@@ -11,7 +11,7 @@ module.exports = function( grunt ) {
    var src = {
       gruntfile: 'Gruntfile.js',
       require: 'require_config.js',
-      laxar_patterns: [ pkg.name + '.js', 'lib/**/*.js', '!lib/**/spec/**/*.js' ],
+      'laxar-patterns': [ pkg.name + '.js', 'lib/**/*.js', '!lib/**/spec/**/*.js' ],
       specs: [ 'lib/**/spec/**/*.js' ],
       docs: [ 'docs/**/*.md' ]
    };
@@ -25,7 +25,7 @@ module.exports = function( grunt ) {
             options: { node: true },
             src: src.gruntfile
          },
-         laxar_patterns: { src: src.laxar_patterns },
+         'laxar-patterns': { src: src[ pkg.name ] },
          specs: { src: src.specs }
       },
       karma: {
@@ -45,7 +45,7 @@ module.exports = function( grunt ) {
                { pattern: '*.js', included: false }
             ]
          },
-         laxar_patterns: {
+         'laxar-patterns': {
             options: {
                laxar: {
                   specRunner: 'lib/spec/spec_runner.js',
@@ -79,9 +79,9 @@ module.exports = function( grunt ) {
             files: src.gruntfile,
             tasks: [ 'jshint:gruntfile']
          },
-         laxar_patterns: {
-            files: src.laxar_patterns,
-            tasks: [ 'jshint:laxar_patterns', 'karma' ]
+         'laxar-patterns': {
+            files: src[ pkg.name ],
+            tasks: [ 'jshint:laxar-patterns', 'karma' ]
          },
          specs: {
             files: src.specs,

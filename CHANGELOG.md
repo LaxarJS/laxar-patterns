@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.0.0-alpha.2
+
 - [#39](https://github.com/LaxarJS/laxar_patterns/issues/39): project: renamed from `laxar_patterns` to `laxar-patterns`
     + **BREAKING CHANGE:** see ticket for details
 

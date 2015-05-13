@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#40](https://github.com/LaxarJS/laxar_patterns/issues/40): documentation: small fixes
+
 
 ## v1.0.0-alpha.2
 

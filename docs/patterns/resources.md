@@ -39,7 +39,7 @@ Event name                 | Payload Attribute | Type   | Description
                            | `patches`         | array  | A [JSON-Patch](https://tools.ietf.org/html/rfc6902) document (an array representing a sequence of incremental modifications)
 
 Because modifications _(didUpdate)_ are transmitted incrementally, the resource master may use the `patches` attribute of the event payload to persist modifications using an [HTTP PATCH](http://tools.ietf.org/html/rfc5789) request.
-To create and apply patches, you require `laxar_patterns` into your widget controller and use `createPatch` and `applyPatch` from the `laxar_patterns.json` API.
+To create and apply patches, you require `laxar-patterns` into your widget controller and use `createPatch` and `applyPatch` its `json` API.
 
 When sharing resources, keep in mind that resource events (like all LaxarJS events) are cloned for each receiver.
 This makes it easy to write robust applications, but can lead to inefficiencies if very large resources are published.

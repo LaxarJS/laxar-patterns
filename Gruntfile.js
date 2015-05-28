@@ -87,13 +87,31 @@ module.exports = function( grunt ) {
             files: src.specs,
             tasks: [ 'jshint:specs', 'karma' ]
          }
+      },
+      clean: {
+         apidoc: {
+            src: [ 'docs/api/*.js.md' ]
+         }
+      },
+      laxar_dox: {
+         default: {
+            files: [ {
+               src: [
+                  'lib/*.js'
+               ],
+               dest: 'docs/api/'
+            } ]
+         }
       }
    } );
 
+   grunt.loadNpmTasks( 'grunt-contrib-clean' );
    grunt.loadNpmTasks( 'grunt-contrib-jshint' );
    grunt.loadNpmTasks( 'grunt-contrib-watch' );
    grunt.loadNpmTasks( 'grunt-laxar' );
 
    grunt.registerTask( 'test', [ 'karma', 'test_results_merger', 'lcov_info_merger', 'jshint' ] );
-   grunt.registerTask( 'default', [ 'test' ] );
+   grunt.registerTask( 'apidoc', [ 'clean:apidoc', 'laxar_dox' ] );
+
+   grunt.registerTask( 'default', [ 'test', 'apidoc' ] );
 };

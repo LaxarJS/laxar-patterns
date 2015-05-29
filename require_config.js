@@ -1,6 +1,34 @@
 var require = {
-   baseUrl: './',
-   deps: [],
+   baseUrl: './bower_components/',
+   paths: {
+      requirejs: 'requirejs/require',
+      text: 'requirejs-plugins/lib/text',
+      json: 'requirejs-plugins/src/json',
+      'json-patch': 'fast-json-patch/src/json-patch-duplex',
+
+      'laxar': 'laxar/dist/laxar',
+      'laxar/laxar_testing': 'laxar/dist/laxar_testing',
+
+      // LaxarJS dependencies:
+      jjv: 'jjv/lib/jjv',
+      jjve: 'jjve/jjve',
+      'angular-route': 'angular-route/angular-route',
+      'angular-sanitize': 'angular-sanitize/angular-sanitize',
+      'angular-mocks': 'angular-mocks/angular-mocks',
+      angular: 'angular/angular',
+
+      // testing:
+      jasmine: 'jasmine/lib/jasmine-core/jasmine',
+      q_mock: 'q_mock/q',
+      'jquery': 'jquery/dist/jquery'
+   },
+   packages: [
+      {
+         name: 'laxar-patterns',
+         location: '.',
+         main: 'laxar-patterns'
+      }
+   ],
    shim: {
       angular: {
          deps: [],
@@ -30,31 +58,5 @@ var require = {
       'json-patch': {
          exports: 'jsonpatch'
       }
-   },
-   packages: [
-      {
-         name: 'laxar',
-         location: 'bower_components/laxar',
-         main: 'laxar_testing'
-      }
-   ],
-   paths: {
-      requirejs: 'bower_components/requirejs/require',
-      text: 'bower_components/requirejs-plugins/lib/text',
-      json: 'bower_components/requirejs-plugins/src/json',
-      'json-patch': 'bower_components/fast-json-patch/src/json-patch-duplex',
-
-      // LaxarJS dependencies:
-      jjv: 'bower_components/jjv/lib/jjv',
-      jjve: 'bower_components/jjve/jjve',
-      'angular-route': 'bower_components/angular-route/angular-route',
-      'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize',
-      'angular-mocks': 'bower_components/angular-mocks/angular-mocks',
-      angular: 'bower_components/angular/angular',
-
-      // testing:
-      jasmine: 'bower_components/jasmine/lib/jasmine-core/jasmine',
-      q_mock: 'bower_components/q_mock/q',
-      'jquery': 'bower_components/jquery/dist/jquery'
    }
 };

@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.0.0-beta.0
+
 - [#43](https://github.com/LaxarJS/laxar_patterns/issues/43): tests: fixed usage of laxar_testing for laxar-dist
 - [#42](https://github.com/LaxarJS/laxar_patterns/issues/42): documentation: provided updated API doc for relevant modules
 

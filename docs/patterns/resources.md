@@ -32,7 +32,7 @@ Modifications to a resource may be published through the _didUpdate_ event, by m
 Event name                 | Payload Attribute | Type   | Description
 ---------------------------|-------------------|--------|-------------------------------------------------------------
 `didReplace.{resource}`    |                   |        | _published by a resource master to define state and identity of a shared resource_
-                           | `resource         | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
+                           | `resource`        | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
                            | `data`            | object | the (initial or new) state of the resource
 `didUpdate.{resource}`     |                   |        | _published by a resource master or by its slaves to publish modifications to the state of a shared resource_
                            | `resource`        | string | _see above_

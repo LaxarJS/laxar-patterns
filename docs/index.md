@@ -2,8 +2,10 @@
 
 To allow for widgets to cooperate without tight coupling, it is very useful to share a basic event vocabulary.
 The LaxarJS Runtime already defines the semantics of [core event patterns](//github.com/LaxarJS/laxar/blob/master/docs/manuals/events.md#core-patterns).
-For application-level events, _LaxarJS Patterns_ provides an additional vocabulary, which may be grouped into a handful of _pattern families__.
+For application-level events, _LaxarJS Patterns_ provides an additional vocabulary, which may be grouped into a handful of _pattern families_.
 Before starting with the patterns, make sure that you are familiar with the [LaxarJS Core Concepts](//github.com/LaxarJS/laxar/blob/master/docs/concepts.md) and the [LaxarJS events manual](//github.com/LaxarJS/laxar/blob/master/docs/manuals/events.md).
+
+For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](docs/api) as well.
 
 ## Families of LaxarJS Patterns
 

@@ -7,3 +7,5 @@ For application-level events, _LaxarJS Patterns_ provides an additional vocabula
 Also, a helper library is provided, to simplify dealing with event subscriptions.
 
 Have a look at the [docs](docs/index.md) for more information, but  make sure that you are familiar with [LaxarJS](//github.com/LaxarJS/laxar) first.
+
+For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](docs/api) as well.

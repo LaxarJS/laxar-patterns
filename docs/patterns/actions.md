@@ -41,3 +41,5 @@ This information exposes implementation details of the sender, so respondents sh
 
 The `outcome` that is sent with the `didTakeAction` response indicated if the (assumed) user intent could be satisfied, because of an error condition that could not be handled (such as a network problem).
 If the outcome is `ERROR`, the initiator should signal this to the user if appropriate, and the handler should publish a `didEncounterError` event with details on the problem.
+
+You are free to add any additional information to a `takeActionRequest` or `didTakeAction` event payload, but bear in mind, that a third party widget following this guide may not understand or preserve your custom data.

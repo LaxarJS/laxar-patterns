@@ -37,13 +37,13 @@ Creates and returns a simple handler function for didReplace events. Replaces wi
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| context | `Object` | the context the handler works on |
-| modelKey | `String` | the property of `context,resources` the handler writes replaces to |
+| context | `Object` |  the context the handler works on |
+| modelKey | `String` |  the property of `context,resources` the handler writes replaces to |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Function` | the handler function |
+| `Function` |  the handler function |
 
 #### <a name="updateHandler"></a>updateHandler( context, modelKey )
 Creates and returns a simple handler function for didUpdate events. Updates will be written to
@@ -52,13 +52,13 @@ Creates and returns a simple handler function for didUpdate events. Updates will
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| context | `Object` | the context the handler works on |
-| modelKey | `String` | the property of `context.resources` the handler applies updates to |
+| context | `Object` |  the context the handler works on |
+| modelKey | `String` |  the property of `context.resources` the handler applies updates to |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Function` | the handler function |
+| `Function` |  the handler function |
 
 #### <a name="replacePublisherForFeature"></a>replacePublisherForFeature( context, featurePath, optionalOptions )
 Creates and returns a function to publish didReplace events for the resource found as feature
@@ -69,15 +69,15 @@ the underlying event bus call.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| context | `Object` | the context the publisher works on |
-| featurePath | `String` | the property of `context.features` the publisher reads the resource name from |
-| _optionalOptions_ | `Object` | options for the publisher |
-| _optionalOptions.deliverToSender_ | `Boolean` | the value is forwarded to `eventBus.publish`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| context | `Object` |  the context the publisher works on |
+| featurePath | `String` |  the property of `context.features` the publisher reads the resource name from |
+| _optionalOptions_ | `Object` |  options for the publisher |
+| _optionalOptions.deliverToSender_ | `Boolean` |  the value is forwarded to `eventBus.publish`: if `true` the event will also be delivered to the publisher. Default is `false` |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Function` | the publisher function. Takes the data to publish as single argument |
+| `Function` |  the publisher function. Takes the data to publish as single argument |
 
 #### <a name="updatePublisherForFeature"></a>updatePublisherForFeature( context, featurePath, optionalOptions )
 Creates and returns a function to publish didUpdate events for the resource found as feature
@@ -117,15 +117,15 @@ about the domain is available at the user of this publisher.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| context | `Object` | the context the publisher works on |
-| featurePath | `String` | the property of `context.features` the publisher reads the resource name from |
-| _optionalOptions_ | `Object` | options for the publisher |
-| _optionalOptions.deliverToSender_ | `Boolean` | the value is forward to `eventBus.publish`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| context | `Object` |  the context the publisher works on |
+| featurePath | `String` |  the property of `context.features` the publisher reads the resource name from |
+| _optionalOptions_ | `Object` |  options for the publisher |
+| _optionalOptions.deliverToSender_ | `Boolean` |  the value is forward to `eventBus.publish`: if `true` the event will also be delivered to the publisher. Default is `false` |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Function` | the publisher function as described above |
+| `Function` |  the publisher function as described above |
 
 #### <a name="handlerFor"></a>handlerFor( context )
 Creates a new handler instance for didReplace and didUpdate events. It already handles setting of the
@@ -134,12 +134,12 @@ resource data on didReplace in the context.resources property and updating that 
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| context | `Object` | the context the handler should work with. It expects to find an `eventBus` property there with which it can do the event handling |
+| context | `Object` |  the context the handler should work with. It expects to find an `eventBus` property there with which it can do the event handling |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `ResourceHandler` | a resource handler instance |
+| `ResourceHandler` |  a resource handler instance |
 
 #### <a name="isSame"></a>isSame( resourceA, resourceB, compareAttributes )
 Tests if two objects represent the same resource.
@@ -161,14 +161,14 @@ The test takes place as follows:
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| resourceA | `Object` | the first object to test |
-| resourceB | `Object` | the second object to test |
-| compareAttributes | `Array.<String>` | the list of attributes determining resource identity |
+| resourceA | `Object` |  the first object to test |
+| resourceB | `Object` |  the second object to test |
+| compareAttributes | `Array.<String>` |  the list of attributes determining resource identity |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Boolean` | `true` if both objects are assumed to represent the same resource, `false` otherwise |
+| `Boolean` |  `true` if both objects are assumed to represent the same resource, `false` otherwise |
 
 ## Types
 ### <a name="ResourceHandler"></a>ResourceHandler
@@ -201,19 +201,19 @@ patterns.resources,handlerFor( $scope )
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| featurePath | `String` | the attribute path to the feature for the resource |
-| _optionalOptions_ | `Object` | options and callbacks to use |
-| _optionalOptions.onReplace_ | `Function`, `Array.<Function>` | a function or a list of functions to call when a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first the second time a didReplace event occurs |
-| _optionalOptions.onUpdate_ | `Function`, `Array.<Function>` | a function or a list of functions to call when a didUpdate event is received. Each function receives the event object as argument |
-| _optionalOptions.onUpdateReplace_ | `Function`, `Array.<Function>` | a function or a list of functions to call when a didUpdate or a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first for didReplace events the second time such an event occurs |
-| _optionalOptions.omitFirstReplace_ | `Boolean` | if `true` `options.onReplace` is only called after the first time a didReplace event occurred. Default is `false` |
-| _optionalOptions.modelKey_ | `String` | the key to use for the resource in `context.resources`. If not given the last path fragment of `featurePath` is used. For example if the path is `myfeature.superResource` the key will be `superResource` |
-| _optionalOptions.isOptional_ | `Boolean` | if set to `true`, missing configuration for this resource is silently ignored and no handlers are registered. If set to `false`, an error will be raised in this case (default is `false`) |
+| featurePath | `String` |  the attribute path to the feature for the resource |
+| _optionalOptions_ | `Object` |  options and callbacks to use |
+| _optionalOptions.onReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first the second time a didReplace event occurs |
+| _optionalOptions.onUpdate_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate event is received. Each function receives the event object as argument |
+| _optionalOptions.onUpdateReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate or a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first for didReplace events the second time such an event occurs |
+| _optionalOptions.omitFirstReplace_ | `Boolean` |  if `true` `options.onReplace` is only called after the first time a didReplace event occurred. Default is `false` |
+| _optionalOptions.modelKey_ | `String` |  the key to use for the resource in `context.resources`. If not given the last path fragment of `featurePath` is used. For example if the path is `myfeature.superResource` the key will be `superResource` |
+| _optionalOptions.isOptional_ | `Boolean` |  if set to `true`, missing configuration for this resource is silently ignored and no handlers are registered. If set to `false`, an error will be raised in this case (default is `false`) |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `ResourceHandler` | this instance for chaining |
+| `ResourceHandler` |  this instance for chaining |
 
 #### <a name="ResourceHandler#registerResource"></a>ResourceHandler#registerResource( resource, optionalOptions )
 Registers default event handlers for a known resource name. All replacements and updates will be
@@ -222,18 +222,18 @@ written to `context.resources`.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| resource | `String` | the resource the handler should be registered for |
-| _optionalOptions_ | `Object` | options and callbacks to use |
-| _optionalOptions.onReplace_ | `Function`, `Array.<Function>` | a function or a list of functions to call when a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first the second time a didReplace event occurs |
-| _optionalOptions.onUpdate_ | `Function`, `Array.<Function>` | a function or a list of functions to call when a didUpdate event is received. Each function receives the event object as argument |
-| _optionalOptions.onUpdateReplace_ | `Function`, `Array.<Function>` | a function or a list of functions to call when a didUpdate or a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first for didReplace events the second time such an event occurs |
-| _optionalOptions.omitFirstReplace_ | `Boolean` | if `true` `options.onReplace` is only called after the first time a didReplace event occurred. Default is `false` |
-| _optionalOptions.modelKey_ | `String` | the key to use for the resource in `context.resources`. If not given the value of `resource` is used |
+| resource | `String` |  the resource the handler should be registered for |
+| _optionalOptions_ | `Object` |  options and callbacks to use |
+| _optionalOptions.onReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first the second time a didReplace event occurs |
+| _optionalOptions.onUpdate_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate event is received. Each function receives the event object as argument |
+| _optionalOptions.onUpdateReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate or a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first for didReplace events the second time such an event occurs |
+| _optionalOptions.omitFirstReplace_ | `Boolean` |  if `true` `options.onReplace` is only called after the first time a didReplace event occurred. Default is `false` |
+| _optionalOptions.modelKey_ | `String` |  the key to use for the resource in `context.resources`. If not given the value of `resource` is used |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `ResourceHandler` | this instance for chaining |
+| `ResourceHandler` |  this instance for chaining |
 
 #### <a name="ResourceHandler#whenAllWereReplaced"></a>ResourceHandler#whenAllWereReplaced( callback, optionalOptions )
 Registers a callback that is called once all resources were initially replaced. If more resource
@@ -243,14 +243,14 @@ for.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| callback | `Function` | the function to call |
-| _optionalOptions_ | `Boolean` | an optional set of parameters to specify watch behavior |
-| _optionalOptions.watch_ | `Boolean` | if `true`, the callback will be called again whenever resources are modified after all were replaced at least once |
+| callback | `Function` |  the function to call |
+| _optionalOptions_ | `Boolean` |  an optional set of parameters to specify watch behavior |
+| _optionalOptions.watch_ | `Boolean` |  if `true`, the callback will be called again whenever resources are modified after all were replaced at least once |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `ResourceHandler` | this instance for chaining |
+| `ResourceHandler` |  this instance for chaining |
 
 #### <a name="ResourceHandler#wereAllReplaced"></a>ResourceHandler#wereAllReplaced()
 Allows to find out if there are still outstanding resources, or if all resources have been replaced.
@@ -259,4 +259,4 @@ Can be used in update-/replace-handlers to determine if all dependencies are sat
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Boolean` | `true` if all resources registered with this handler (so far) have been replaced at least once, `false` if there are still outstanding resources |
+| `Boolean` |  `true` if all resources registered with this handler (so far) have been replaced at least once, `false` if there are still outstanding resources |

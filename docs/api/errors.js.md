@@ -23,12 +23,12 @@ The returned publisher function takes these arguments:
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| scope | `Object` | the scope the publisher works on |
-| featurePath | `String` | the configuration path for (i18n) error-messages to publish |
-| _options_ | `Object` | an optional object with additional configuration |
-| _options.localizer_ | `Function` | a function such as `i18nHandler.localize` to prepare messages |
+| scope | `Object` |  the scope the publisher works on |
+| featurePath | `String` |  the configuration path for (i18n) error-messages to publish |
+| _options_ | `Object` |  an optional object with additional configuration |
+| _options.localizer_ | `Function` |  a function such as `i18nHandler.localize` to prepare messages |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Function` | a publisher function with four arguments as described above |
+| `Function` |  a publisher function with four arguments as described above |

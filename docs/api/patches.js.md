@@ -19,8 +19,8 @@ appended to an array all values in between are set to `null`.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| obj | `Object` | the object to apply the patches on |
-| patchMap | `Object` | the mapping of paths to new values |
+| obj | `Object` |  the object to apply the patches on |
+| patchMap | `Object` |  the mapping of paths to new values |
 
 #### <a name="create"></a>create( result, base )
 Creates a map of patches that describe the difference between to objects or arrays. Each entry is a
@@ -32,13 +32,13 @@ added by AngularJS ngRepeat is ignored.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| result | `Object` | the resulting object the patch map should establish |
-| base | `Object` | the object used to base the patches upon |
+| result | `Object` |  the resulting object the patch map should establish |
+| base | `Object` |  the object used to base the patches upon |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Object` | the mapping of path to patch-value |
+| `Object` |  the mapping of path to patch-value |
 
 #### <a name="merge"></a>merge( first, second )
 Merges two patch maps and returns the result. When properties exist in both patch maps, properties
@@ -47,10 +47,10 @@ within the second map overwrite those found within the first one.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| first | `Object` | first map to merge |
-| second | `Object` | second map to merge |
+| first | `Object` |  first map to merge |
+| second | `Object` |  second map to merge |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Object` | the result of the merging |
+| `Object` |  the result of the merging |

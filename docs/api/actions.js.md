@@ -26,18 +26,18 @@ Apart from that this function works just like [publisher](#publisher).
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| scope | `Object` | the scope the publisher works on. Needs at least an EventBus instance as `eventBus` property |
-| feature | `String` | the feature to take the action name from |
-| _optionalOptions_ | `Object` | options for the publisher |
-| _optionalOptions.deliverToSender_ | `Boolean` | the value is forward to `eventBus.publishAndGatherReplies`: if `true` the event will also be delivered to the publisher. Default is `false` |
-| _optionalOptions.onSuccess_ | `Function` | a function that is called when the overall outcome yields "SUCCESS" |
-| _optionalOptions.onError_ | `Function` | a function that is called when the overall outcome yields "ERROR" |
-| _optionalOptions.onComplete_ | `Function` | a function that is called always, independently of the overall outcome |
+| scope | `Object` |  the scope the publisher works on. Needs at least an EventBus instance as `eventBus` property |
+| feature | `String` |  the feature to take the action name from |
+| _optionalOptions_ | `Object` |  options for the publisher |
+| _optionalOptions.deliverToSender_ | `Boolean` |  the value is forward to `eventBus.publishAndGatherReplies`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| _optionalOptions.onSuccess_ | `Function` |  a function that is called when the overall outcome yields "SUCCESS" |
+| _optionalOptions.onError_ | `Function` |  a function that is called when the overall outcome yields "ERROR" |
+| _optionalOptions.onComplete_ | `Function` |  a function that is called always, independently of the overall outcome |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Function` | the publisher as described above |
+| `Function` |  the publisher as described above |
 
 #### <a name="publisher"></a>publisher( scope, action, optionalOptions )
 Creates and returns a function to publish `takeActionRequest` events for a given action. The outcomes of
@@ -63,18 +63,18 @@ $button.on( 'click', publisher );
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| scope | `Object` | the scope the publisher works on. Needs at least an EventBus instance as `eventBus` property |
-| action | `String` | the action to publish on call of the publisher |
-| _optionalOptions_ | `Object` | options for the publisher |
-| _optionalOptions.deliverToSender_ | `Boolean` | the value is forward to `eventBus.publishAndGatherReplies`: if `true` the event will also be delivered to the publisher. Default is `false` |
-| _optionalOptions.onSuccess_ | `Function` | a function that is called when the overall outcome yields "SUCCESS" |
-| _optionalOptions.onError_ | `Function` | a function that is called when the overall outcome yields "ERROR" |
-| _optionalOptions.onComplete_ | `Function` | a function that is called always, independently of the overall outcome |
+| scope | `Object` |  the scope the publisher works on. Needs at least an EventBus instance as `eventBus` property |
+| action | `String` |  the action to publish on call of the publisher |
+| _optionalOptions_ | `Object` |  options for the publisher |
+| _optionalOptions.deliverToSender_ | `Boolean` |  the value is forward to `eventBus.publishAndGatherReplies`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| _optionalOptions.onSuccess_ | `Function` |  a function that is called when the overall outcome yields "SUCCESS" |
+| _optionalOptions.onError_ | `Function` |  a function that is called when the overall outcome yields "ERROR" |
+| _optionalOptions.onComplete_ | `Function` |  a function that is called always, independently of the overall outcome |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Function` | the publisher as described above |
+| `Function` |  the publisher as described above |
 
 #### <a name="handlerFor"></a>handlerFor( scope )
 Creates a new action handler instance for `takeActionRequest` events. It handles sending of an optional
@@ -83,12 +83,12 @@ Creates a new action handler instance for `takeActionRequest` events. It handles
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| scope | `Object` | the scope the handler should work with. It is expected to find an `eventBus` property there with which it can do the event handling |
+| scope | `Object` |  the scope the handler should work with. It is expected to find an `eventBus` property there with which it can do the event handling |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `ActionHandler` | an action handler instance |
+| `ActionHandler` |  an action handler instance |
 
 ## Types
 ### <a name="ActionHandler"></a>ActionHandler
@@ -129,13 +129,13 @@ actions.handlerFor( scope )
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| feature | `String` | the feature to read the actions to watch from |
-| handler | `Function` | the handler to call whenever a `takeActionRequest` event with matching action is received |
+| feature | `String` |  the feature to read the actions to watch from |
+| handler | `Function` |  the handler to call whenever a `takeActionRequest` event with matching action is received |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `ActionHandler` | this instance for chaining |
+| `ActionHandler` |  this instance for chaining |
 
 #### <a name="ActionHandler#registerActions"></a>ActionHandler#registerActions( actions, handler )
 Registers a handler for `takeActionRequest` events for a set of actions. The set may be empty, in
@@ -177,10 +177,10 @@ actions.handlerFor( scope )
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| actions | `Array.<String>` | a set of actions to watch |
-| handler | `Function` | the handler to call whenever a `takeActionRequest` event with matching action is received |
+| actions | `Array.<String>` |  a set of actions to watch |
+| handler | `Function` |  the handler to call whenever a `takeActionRequest` event with matching action is received |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `ActionHandler` | this instance for chaining |
+| `ActionHandler` |  this instance for chaining |

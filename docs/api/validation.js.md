@@ -21,13 +21,13 @@ Creates and returns an event resembling a successful validation result.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| resource | `String` | name of the validated resource |
-| htmlMessages... | `Array.<Object>`, `Object` | messages associated with the result. They should have the structure as described in the module |
+| resource | `String` |  name of the validated resource |
+| htmlMessages... | `Array.<Object>`, `Object` |  messages associated with the result. They should have the structure as described in the module |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Object` | the validation event |
+| `Object` |  the validation event |
 
 #### <a name="errorEvent"></a>errorEvent( resource, htmlMessages )
 Creates and returns an event resembling the result of a validation with errors.
@@ -35,10 +35,10 @@ Creates and returns an event resembling the result of a validation with errors.
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| resource | `String` | name of the validated resource |
-| htmlMessages... | `Array.<Object>`, `Object` | messages associated with the result. They should have the structure as described in the module |
+| resource | `String` |  name of the validated resource |
+| htmlMessages... | `Array.<Object>`, `Object` |  messages associated with the result. They should have the structure as described in the module |
 
 ##### Returns
 | Type | Description |
 | ---- | ----------- |
-| `Object` | the validation event |
+| `Object` |  the validation event |

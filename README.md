@@ -1,4 +1,4 @@
-# LaxarJS Patterns
+# LaxarJS Patterns [![Build Status](https://travis-ci.org/LaxarJS/laxar-patterns.svg?branch=master)](https://travis-ci.org/LaxarJS/laxar-patterns)
 
 > Utilities to implement standard event patterns in LaxarJS widgets
 

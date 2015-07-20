@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#48](https://github.com/LaxarJS/laxar/issues/48): tests: allow to execute spec-tests using a project RequireJS configuration
+    + NEW FEATURE: see ticket for details
 - [#47](https://github.com/LaxarJS/laxar/issues/47): added Travis-CI build integration
     + NEW FEATURE: see ticket for details
 - [#45](https://github.com/LaxarJS/laxar-patterns/issues/45): api-doc: update generated api doc

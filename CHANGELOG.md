@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#49](https://github.com/LaxarJS/laxar-patterns/issues/49): documentation: clarify argument order for json.createPatch
 - [#48](https://github.com/LaxarJS/laxar-patterns/issues/48): tests: allow to execute spec-tests using a project RequireJS configuration
     + NEW FEATURE: see ticket for details
 - [#47](https://github.com/LaxarJS/laxar-patterns/issues/47): added Travis-CI build integration

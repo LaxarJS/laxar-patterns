@@ -85,14 +85,14 @@ fails to apply, the behavior is undefined.
 | object | `Object`, `Array` |  the object to patch (in-place) |
 | patches | `Array` |  a sequence of patches as defined by rfc-6902 |
 
-#### <a name="createPatch"></a>createPatch( objectA, objectB )
+#### <a name="createPatch"></a>createPatch( fromState, toState )
 Calls fast-json-patch to create a rfc-6902 conform JSON patch sequence.
 
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
-| objectA | `Object`, `Array` |  the first item for comparison |
-| objectB | `Object`, `Array` |  the second item for comparison |
+| fromState | `Object`, `Array` |  the state on which to base the list of patches |
+| toState | `Object`, `Array` |  the target state: the desired result of applying the newly created patches to the `fromState` |
 
 ##### Returns
 | Type | Description |

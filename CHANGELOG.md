@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#51](https://github.com/LaxarJS/laxar-patterns/issues/51): resources: allow to mark resource configuration as optional
+    + NEW FEATURE: see ticket for details
 - [#49](https://github.com/LaxarJS/laxar-patterns/issues/49): documentation: clarify argument order for json.createPatch
 - [#48](https://github.com/LaxarJS/laxar-patterns/issues/48): tests: allow to execute spec-tests using a project RequireJS configuration
     + NEW FEATURE: see ticket for details

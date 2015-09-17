@@ -73,6 +73,7 @@ the underlying event bus call.
 | featurePath | `String` |  the property of `context.features` the publisher reads the resource name from |
 | _optionalOptions_ | `Object` |  options for the publisher |
 | _optionalOptions.deliverToSender_ | `Boolean` |  the value is forwarded to `eventBus.publish`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| _optionalOptions.isOptional_ | `Boolean` |  if `true`, don't throw an error if `featurePath.resource` is missing. Instead return a publisher that doesn't do anything when called. Default is `false`. |
 
 ##### Returns
 | Type | Description |
@@ -121,6 +122,7 @@ about the domain is available at the user of this publisher.
 | featurePath | `String` |  the property of `context.features` the publisher reads the resource name from |
 | _optionalOptions_ | `Object` |  options for the publisher |
 | _optionalOptions.deliverToSender_ | `Boolean` |  the value is forward to `eventBus.publish`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| _optionalOptions.isOptional_ | `Boolean` |  if `true`, don't throw an error if `featurePath.resource` is missing. Instead return a publisher that doesn't do anything when called. Default is `false`. |
 
 ##### Returns
 | Type | Description |

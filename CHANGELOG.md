@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#52](https://github.com/LaxarJS/laxar-patterns/issues/52): resources: fixed whenAllWereReplaced with multiple handlers for the same topic
+
 
 ## v1.1.0-alpha.0
 

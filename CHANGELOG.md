@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#52](https://github.com/LaxarJS/laxar-patterns/issues/52): resources: fixed whenAllWereReplaced with multiple handlers for the same topic
 - [#45](https://github.com/LaxarJS/laxar-patterns/issues/45): api-doc: update generated api doc
 
 

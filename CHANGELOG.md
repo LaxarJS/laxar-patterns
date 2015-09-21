@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#50](https://github.com/LaxarJS/laxar-patterns/issues/50): patches: added deprecation notice
+
 
 ## v1.1.0-alpha.1
 

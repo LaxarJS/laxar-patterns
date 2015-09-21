@@ -16,6 +16,8 @@ Applies all patches given as mapping from object path to new value. If a path fr
 it is automatically inserted, using an array if the next key would be an integer. If a value is
 appended to an array all values in between are set to `null`.
 
+This patch format cannot express all operations. Use `json.applyPatch` instead.
+
 ##### Parameters
 | Property | Type | Description |
 | -------- | ---- | ----------- |
@@ -28,6 +30,8 @@ path mapped to the changed value. This map can be applied to another object usin
 
 Properties that start with '$$' are ignored when creating patches, so that for example the $$hashCode
 added by AngularJS ngRepeat is ignored.
+
+This patch format cannot express all operations. Use `json.createPatch` instead.
 
 ##### Parameters
 | Property | Type | Description |
@@ -43,6 +47,9 @@ added by AngularJS ngRepeat is ignored.
 #### <a name="merge"></a>merge( first, second )
 Merges two patch maps and returns the result. When properties exist in both patch maps, properties
 within the second map overwrite those found within the first one.
+
+This patch format cannot express all operations.
+Concatenate `json.createPatch` sequences instead of using this method.
 
 ##### Parameters
 | Property | Type | Description |

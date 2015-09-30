@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.1.0-alpha.2
+
 - [#53](https://github.com/LaxarJS/laxar-patterns/issues/53): resources: pass `meta` to event callbacks
 - [#50](https://github.com/LaxarJS/laxar-patterns/issues/50): patches: added deprecation notice
 

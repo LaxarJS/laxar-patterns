@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#46](https://github.com/LaxarJS/laxar-patterns/issues/46): validation: implemented validation handler
+    + NEW FEATURE: see ticket for details
+
 
 ## v1.1.0-alpha.2
 

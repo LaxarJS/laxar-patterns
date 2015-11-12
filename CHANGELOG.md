@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.2.0-alpha.0
+
 - [#56](https://github.com/LaxarJS/laxar-patterns/issues/56): actions: get q from laxar-tooling (do not create AngularJS injector)
     + NEW FEATURE: see ticket for details
 

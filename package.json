@@ -1,6 +1,6 @@
 {
    "name": "laxar-patterns",
-   "version": "1.2.0-pre",
+   "version": "1.2.0-alpha.0",
    "description": "Utilities to implement standard event patterns in LaxarJS widgets",
    "authors": [],
    "license": "MIT",
@@ -19,6 +19,6 @@
       "grunt-contrib-clean": "~0.6.0",
       "grunt-contrib-watch": "~0.5.3",
       "grunt-contrib-jshint": "~0.8.0",
-      "grunt-laxar": "~1.0.0"
+      "grunt-laxar": "~1.1.0"
    }
 }

@@ -12,7 +12,7 @@
       "bower_components"
    ],
    "dependencies": {
-      "laxar": "^1.0.0",
+      "laxar": "^1.2.0-alpha.0",
       "fast-json-patch": "~0.5.2"
    },
    "devDependencies": {

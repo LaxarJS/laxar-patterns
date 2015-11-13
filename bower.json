@@ -1,6 +1,6 @@
 {
    "name": "laxar-patterns",
-   "version": "1.2.0-alpha.0",
+   "version": "1.2.0-alpha.1",
    "description": "Utilities to implement standard event patterns in LaxarJS widgets",
    "authors": [],
    "license": "MIT",
@@ -12,7 +12,7 @@
       "bower_components"
    ],
    "dependencies": {
-      "laxar": "^1.2.0-alpha.0",
+      "laxar": "^1.2.0-alpha.1",
       "fast-json-patch": "~0.5.2"
    },
    "devDependencies": {

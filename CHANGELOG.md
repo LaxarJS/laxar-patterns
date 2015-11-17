@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.2.0-alpha.2
+
 - [#58](https://github.com/LaxarJS/laxar-patterns/issues/58): actions, resources, validation: do not cache q
 
 

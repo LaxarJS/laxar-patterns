@@ -13,7 +13,7 @@
       "prepublish": "fixinstall && bower install"
    },
    "dependencies": {
-      "laxar": "^1.2.0-alpha.1",
+      "laxar": "^1.1.0",
       "fast-json-patch": "~0.5.2"
    },
    "devDependencies": {

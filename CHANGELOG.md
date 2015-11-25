@@ -3,6 +3,7 @@
 ## Last Changes
 
 
+## v1.1.2
 ## v1.1.1
 
 - [#59](https://github.com/LaxarJS/laxar-patterns/issues/59): dependencies: added missing dependencies to package.json

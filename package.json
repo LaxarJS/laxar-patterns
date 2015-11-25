@@ -12,6 +12,10 @@
       "test": "grunt test --continue",
       "prepublish": "fixinstall && bower install"
    },
+   "dependencies": {
+      "laxar": "^1.2.0-alpha.1",
+      "fast-json-patch": "~0.5.2"
+   },
    "devDependencies": {
       "bower": "~1.3.3",
       "grunt": "~0.4.4",

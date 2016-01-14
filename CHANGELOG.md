@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.2.0
+
 - [#61](https://github.com/LaxarJS/laxar-patterns/issues/61): project: updated copyright year in file header
 - [#59](https://github.com/LaxarJS/laxar-patterns/issues/59): dependencies: added missing dependencies to package.json
 

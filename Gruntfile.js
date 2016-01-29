@@ -39,7 +39,7 @@ module.exports = function( grunt ) {
                   'lib/**/*_spec.js',
                ],
                serveFiles: [
-                  'lib/**/!(*_spec).js',
+                  'lib/!(*_spec).js',
                   'jspm_packages/**/*.js',
                ]
             }

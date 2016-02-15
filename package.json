@@ -20,6 +20,7 @@
     "fast-json-patch": "~0.5.2"
   },
   "devDependencies": {
+    "eslint": "^2.0.0",
     "grunt": "~0.4.4",
     "grunt-cli": "~0.1.13",
     "grunt-contrib-clean": "~0.6.0",

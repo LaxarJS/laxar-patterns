@@ -3,29 +3,24 @@
  * Released under the MIT license.
  * http://laxarjs.org/license
  */
-define( [
-   './lib/actions',
-   './lib/errors',
-   './lib/flags',
-   './lib/i18n',
-   './lib/json',
-   './lib/patches',
-   './lib/resources',
-   './lib/validation',
-   './lib/visibility'
-], function( actions, errors, flags, i18n, json, patches, resources, validation, visibility ) {
-   'use strict';
+import * as actions from 'lib/actions';
+import * as errors from 'lib/errors';
+import * as flags from 'lib/flags';
+import * as i18n from 'lib/i18n';
+import * as json from 'lib/json';
+import * as patches from 'lib/patches';
+import * as resources from 'lib/resources';
+import * as validation from 'lib/validation';
+import * as visibility from 'lib/visibility';
 
-   return {
-      actions: actions,
-      errors: errors,
-      flags: flags,
-      i18n: i18n,
-      json: json,
-      patches: patches,
-      resources: resources,
-      validation: validation,
-      visibility: visibility
-   };
-
-} );
+export {
+   actions,
+   errors,
+   flags,
+   i18n,
+   json,
+   patches,
+   resources,
+   validation,
+   visibility
+};

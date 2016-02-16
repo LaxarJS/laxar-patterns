@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#64](https://github.com/LaxarJS/laxar-patterns/issues/64): using locally installed jspm
 - [#63](https://github.com/LaxarJS/laxar-patterns/issues/63): testing: updated spec runners to Jasmine 2.4
 - [#62](https://github.com/LaxarJS/laxar-patterns/issues/62): transformed AMD modules to es2015 modules
     + **BREAKING CHANGE:** see ticket for details

@@ -1,4 +1,5 @@
-var path = require('path');
+/*eslint-env node*/
+/*eslint no-var:0*/
 var Builder = require('systemjs-builder');
 
 // optional constructor options
@@ -13,12 +14,6 @@ builder.config({
       'fast-json-patch': {
          build: false
       }
-   },
-   map: {
-      'laxar-patterns': 'laxar-patterns.js'
-   },
-   paths: {
-      'laxar-patterns': 'laxar-patterns.js'
    }
 });
 

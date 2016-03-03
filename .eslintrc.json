@@ -6,7 +6,8 @@
    },
    "env": {
       "browser": true,
-      "es6": true
+      "es6": true,
+      "jasmine": true
    },
    "rules": {
       "semi": 1,
@@ -14,6 +15,10 @@
       "no-console": 1,
       "no-const-assign": 2,
       "no-debugger": 2,
-      "no-var": 0
+      "no-var": 1,
+      "no-undef": 2,
+      "no-unused-vars": 1,
+
+      "prefer-const": 1
    }
 }

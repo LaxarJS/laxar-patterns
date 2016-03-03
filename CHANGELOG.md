@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v2.0.0-alpha.0
+
 - [#65](https://github.com/LaxarJS/laxar-patterns/issues/65): adopted to changes due to removing angular in LaxarJS
 - [#64](https://github.com/LaxarJS/laxar-patterns/issues/64): using locally installed jspm
 - [#63](https://github.com/LaxarJS/laxar-patterns/issues/63): testing: updated spec runners to Jasmine 2.4

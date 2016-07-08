@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#68](https://github.com/LaxarJS/laxar-patterns/issues/68): switched to webpack build
+    + **BREAKING CHANGE:** see ticket for details
+
 
 ## v2.0.0-alpha.0
 

@@ -11,48 +11,29 @@
     "url": "https://github.com/LaxarJS/laxar-patterns.git"
   },
   "scripts": {
-    "test": "grunt test --continue",
-    "build": "node build.js",
-    "prepublish": "fixinstall && jspm install"
+    "prepublish": "webpack --config webpack.dist.config.js",
+    "test": "npm run karma && npm run eslint",
+    "karma": "karma start karma.config.js",
+    "eslint": "eslint laxar-patterns.js lib",
+    "browser-spec": "webpack --config webpack.browser-spec.config.js && webpack-dev-server --port 8082 --inline --config webpack.browser-spec.config.js"
   },
   "dependencies": {
-    "laxar": "^1.2.0-alpha.1",
+    "laxar": "^2.0.0-alpha.2",
     "fast-json-patch": "~0.5.2"
   },
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-cli": "~0.1.13",
-    "grunt-contrib-clean": "~0.6.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-karma": "^0.12.1",
-    "grunt-laxar": "~1.0.0",
-    "grunt-markdown": "~0.5.0",
-    "gruntify-eslint": "^2.0.0",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "eslint": "^2.13.1",
     "jasmine-core": "^2.4.1",
-    "jspm": "^0.16.27",
-    "karma": "^0.13.19",
-    "karma-chrome-launcher": "^0.2.2",
-    "karma-firefox-launcher": "^0.1.7",
-    "karma-jasmine": "^0.3.6",
-    "karma-jspm": "^2.0.2",
-    "karma-junit-reporter": "^0.3.8",
-    "karma-phantomjs-launcher": "^0.2.3",
-    "phantomjs": "^2.1.3",
-    "systemjs": "^0.19.17",
-    "systemjs-builder": "^0.15.3"
-  },
-  "jspm": {
-    "configFile": "system.config.js",
-    "dependencies": {
-      "fast-json-patch": "npm:fast-json-patch@^0.5.6"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.24",
-      "babel-runtime": "npm:babel-runtime@^5.8.24",
-      "core-js": "npm:core-js@^1.1.4",
-      "laxar": "github:LaxarJS/laxar@2.0.0-alpha.0",
-      "laxar-jasmine-runner": "github:LaxarJS/laxar-jasmine-runner@^0.1.1",
-      "q": "npm:q@^1.4.1"
-    }
+    "karma": "^1.1.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-jasmine-html-runner-plugin": "~0.1.0"
   }
 }

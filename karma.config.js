@@ -3,7 +3,7 @@
 
 
 const webpackConfig = Object.assign( {}, require('./webpack.base.config' ) );
-delete webpackConfig.entry.laxar;
+delete webpackConfig.entry[ 'laxar-patterns' ];
 delete webpackConfig.plugins;
 webpackConfig.devtool = 'inline-source-map';
 const polyfillPath = require.resolve( 'laxar/dist/polyfills' );
@@ -18,7 +18,7 @@ module.exports = function(config) {
       // list of files / patterns to load in the browser
       files: [
          polyfillPath,
-         '**/spec/spec-runner.js'
+         'lib/spec/spec-runner.js'
       ],
       preprocessors: {
          '**/spec/spec-runner.js': [ 'webpack', 'sourcemap' ]

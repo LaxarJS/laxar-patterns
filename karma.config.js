@@ -8,19 +8,18 @@ delete webpackConfig.plugins;
 webpackConfig.devtool = 'inline-source-map';
 
 module.exports = function(config) {
-   // const browsers = [ 'PhantomJS', 'Firefox' ].concat( [
-   //    process.env.TRAVIS ? 'ChromeTravisCi' : 'Chrome'
-   // ] );
-   const browsers = [ 'PhantomJS' ];
+   const browsers = [ 'PhantomJS', 'Firefox' ].concat( [
+      process.env.TRAVIS ? 'ChromeTravisCi' : 'Chrome'
+   ] );
 
    config.set( {
       frameworks: [ 'jasmine' ],
       files: [
          require.resolve( 'laxar/dist/polyfills' ),
-         '**/spec/spec-runner.js'
+         'lib/spec/spec-runner.js'
       ],
       preprocessors: {
-         '**/spec/spec-runner.js': [ 'webpack', 'sourcemap' ]
+         'lib/spec/spec-runner.js': [ 'webpack', 'sourcemap' ]
       },
       webpack: webpackConfig,
 

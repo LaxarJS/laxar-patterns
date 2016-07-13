@@ -8,9 +8,10 @@ delete webpackConfig.plugins;
 webpackConfig.devtool = 'inline-source-map';
 
 module.exports = function(config) {
-   const browsers = [ 'PhantomJS', 'Firefox' ].concat( [
-      process.env.TRAVIS ? 'ChromeTravisCi' : 'Chrome'
-   ] );
+   // const browsers = [ 'PhantomJS', 'Firefox' ].concat( [
+   //    process.env.TRAVIS ? 'ChromeTravisCi' : 'Chrome'
+   // ] );
+   const browsers = [ 'PhantomJS' ];
 
    config.set( {
       frameworks: [ 'jasmine' ],
@@ -28,7 +29,7 @@ module.exports = function(config) {
          outputDir: 'karma-output/'
       },
       port: 9876,
-      browsers: browsers,
+      browsers,
       customLaunchers: {
          ChromeTravisCi: {
             base: 'Chrome',

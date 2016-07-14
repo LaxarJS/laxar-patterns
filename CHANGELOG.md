@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#71](https://github.com/LaxarJS/laxar-patterns/issues/71): eslint: use shared configuration
 - [#70](https://github.com/LaxarJS/laxar-patterns/issues/70): additional eslint restrictions
 - [#69](https://github.com/LaxarJS/laxar-patterns/issues/69): karma/webpack: added firefox/chrome setup
 - [#68](https://github.com/LaxarJS/laxar-patterns/issues/68): switched to webpack build

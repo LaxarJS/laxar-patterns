@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#72](https://github.com/LaxarJS/laxar-patterns/issues/72): adapted to removed event bus unsubscribe method
 - [#73](https://github.com/LaxarJS/laxar-patterns/issues/73): resources: using log from context object
 - [#71](https://github.com/LaxarJS/laxar-patterns/issues/71): eslint: use shared configuration
 - [#70](https://github.com/LaxarJS/laxar-patterns/issues/70): additional eslint restrictions

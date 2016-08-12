@@ -18,7 +18,7 @@
     "browser-spec": "webpack --config webpack.browser-spec.config.js && webpack-dev-server --port 8082 --inline --config webpack.browser-spec.config.js"
   },
   "dependencies": {
-    "laxar": "^2.0.0-alpha.5",
+    "laxar": "^2.0.0-alpha.7",
     "fast-json-patch": "~0.5.2"
   },
   "devDependencies": {

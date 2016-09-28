@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#67](https://github.com/LaxarJS/laxar-patterns/issues/67): flags, resources: allow to pass just callbacks to handlers (instead of options object)
+    + NEW FEATURE: see ticket for details
+
 
 ## v1.2.0
 

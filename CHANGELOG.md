@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#67](https://github.com/LaxarJS/laxar-patterns/issues/67): flags, resources: allow to pass just callbacks to handlers (instead of options object)
+    + NEW FEATURE: see ticket for details
 - [#74](https://github.com/LaxarJS/laxar-patterns/issues/74): adapted to changes in laxar
 - [#72](https://github.com/LaxarJS/laxar-patterns/issues/72): adapted to removed event bus unsubscribe method
 - [#73](https://github.com/LaxarJS/laxar-patterns/issues/73): resources: using log from context object

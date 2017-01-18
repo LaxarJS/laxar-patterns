@@ -19,7 +19,7 @@
     "browser-spec-build": "cross-env NODE_ENV=browser-spec webpack",
     "browser-spec-start": "cross-env NODE_ENV=browser-spec webpack-dev-server --port 8082 --inline",
     "karma": "karma start karma.config.js",
-    "eslint": "eslint laxar.js *.config.js lib"
+    "eslint": "eslint laxar-patterns.js *.config.js lib"
   },
   "dependencies": {
     "laxar": "^2.0.0-alpha.13",

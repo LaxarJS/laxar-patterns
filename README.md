@@ -11,13 +11,13 @@ Have a look at the [docs](docs/index.md) for more information, but  make sure th
 For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](docs/api) as well.
 
 
-### Hacking the library
+### Building from source
 
 Instead of using a pre-compiled library within a project, you can also clone this repository:
 
 ```sh
-git clone https://github.com/LaxarJS/laxar.git
-cd laxar
+git clone https://github.com/LaxarJS/laxar-patterns.git
+cd laxar-patterns
 npm install
 ```
 

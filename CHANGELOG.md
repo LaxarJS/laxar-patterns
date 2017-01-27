@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v2.0.0-alpha.2
+
 - [#77](https://github.com/LaxarJS/laxar-patterns/issues/77): project: added missing `.npmignore`
 
 

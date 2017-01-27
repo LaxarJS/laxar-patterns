@@ -2386,9 +2386,9 @@ klaw@^1.0.0:
   optionalDependencies:
     graceful-fs "^4.1.9"
 
-laxar@^2.0.0-alpha.13:
-  version "2.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/laxar/-/laxar-2.0.0-alpha.13.tgz#b8193943be3eeebacccc4dac8d12375c797586ef"
+laxar@^2.0.0-alpha.14:
+  version "2.0.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/laxar/-/laxar-2.0.0-alpha.14.tgz#f7c4bcbc16812d7b85744ddc9bfcac37edf8ca04"
   dependencies:
     page "~1.7.1"
 

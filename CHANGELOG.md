@@ -1,10 +1,11 @@
 # Changelog
 
-- [#76](https://github.com/LaxarJS/laxar-patterns/issues/76): project: updated dev-dependencies, upgraded to webpack 2
-
-
 ## Last Changes
 
+
+## v2.0.0-alpha.1
+
+- [#76](https://github.com/LaxarJS/laxar-patterns/issues/76): project: updated dev-dependencies, upgraded to webpack 2
 - [#66](https://github.com/LaxarJS/laxar-patterns/issues/66): actions: added convenience method `connectPublisherToFeature`
     + NEW FEATURE: see ticket for details
 - [#67](https://github.com/LaxarJS/laxar-patterns/issues/67): flags, resources: allow to pass just callbacks to handlers (instead of options object)

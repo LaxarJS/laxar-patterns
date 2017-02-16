@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#54](https://github.com/LaxarJS/laxar-patterns/issues/54): event handlers: fixed promise semantics where necessary
+    + **BREAKING CHANGE:** see ticket for details
+
 
 ## v2.0.0-alpha.2
 

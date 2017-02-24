@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#75](https://github.com/LaxarJS/laxar-patterns/issues/75): actions: added documentation for timeout option
 - [#82](https://github.com/LaxarJS/laxar-patterns/issues/82): validation: removed explicit `log` argument for `handlerFor`
     + **BREAKING CHANGE:** see ticket for details
 - [#55](https://github.com/LaxarJS/laxar-patterns/issues/55): validation: fixed error event messages

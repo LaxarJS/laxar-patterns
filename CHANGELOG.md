@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#55](https://github.com/LaxarJS/laxar-patterns/issues/55): validation: fixed error event messages
+    + **BREAKING CHANGE:** see ticket for details
 - [#80](https://github.com/LaxarJS/laxar-patterns/issues/80): removed resources.isSame function
     + **BREAKING CHANGE:** see ticket for details
 - [#54](https://github.com/LaxarJS/laxar-patterns/issues/54): event handlers: fixed promise semantics where necessary

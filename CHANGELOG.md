@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#81](https://github.com/LaxarJS/laxar-patterns/issues/81): flags: implemented flag publisher APIs
+    + NEW FEATURE: see ticket for details
 - [#75](https://github.com/LaxarJS/laxar-patterns/issues/75): actions: added documentation for timeout option
 - [#82](https://github.com/LaxarJS/laxar-patterns/issues/82): validation: removed explicit `log` argument for `handlerFor`
     + **BREAKING CHANGE:** see ticket for details

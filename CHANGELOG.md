@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#82](https://github.com/LaxarJS/laxar-patterns/issues/82): validation: removed explicit `log` argument for `handlerFor`
+    + **BREAKING CHANGE:** see ticket for details
 - [#55](https://github.com/LaxarJS/laxar-patterns/issues/55): validation: fixed error event messages
     + **BREAKING CHANGE:** see ticket for details
 - [#80](https://github.com/LaxarJS/laxar-patterns/issues/80): removed resources.isSame function

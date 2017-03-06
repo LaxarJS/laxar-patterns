@@ -18,12 +18,13 @@
     "dist": "cross-env NODE_ENV=production webpack",
     "browser-spec-build": "cross-env NODE_ENV=browser-spec webpack",
     "browser-spec-start": "cross-env NODE_ENV=browser-spec webpack-dev-server --port 8082 --inline",
+    "apidoc": "laxar-dox -d docs/api/ --naming-style-package --modules-from-directory lib/ && laxar-dox -d docs/api/ --naming-style-package laxar-patterns.js",
     "karma": "karma start karma.config.js",
     "eslint": "eslint laxar-patterns.js *.config.js lib"
   },
   "dependencies": {
-    "laxar": "^2.0.0-alpha.14",
-    "fast-json-patch": "~0.5.2"
+    "fast-json-patch": "~0.5.2",
+    "laxar": "^2.0.0-alpha.14"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
@@ -42,6 +43,7 @@
     "karma-phantomjs-launcher": "^1.0.2",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.1",
+    "laxar-dox": "^2.0.0-alpha.4",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0",
     "webpack-jasmine-html-runner-plugin": "^0.5.0"

@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#85](https://github.com/LaxarJS/laxar-patterns/issues/85): removed `resources.replaceHandler` and `resources.updateHandler`
+    + **BREAKING CHANGE:** see ticket for details
 - [#78](https://github.com/LaxarJS/laxar-patterns/issues/78): fixed method parameters and overhauled api doc
     + **BREAKING CHANGE:** see ticket for details
 - [#81](https://github.com/LaxarJS/laxar-patterns/issues/81): flags: implemented flag publisher APIs

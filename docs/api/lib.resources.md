@@ -7,8 +7,6 @@ This module provides helpers for patterns regarding *didReplace* and *didUpdate*
 
 **Module Members**
 
-- [replaceHandler()](#replaceHandler)
-- [updateHandler()](#updateHandler)
 - [replacePublisherForFeature()](#replacePublisherForFeature)
 - [updatePublisherForFeature()](#updatePublisherForFeature)
 - [handlerFor()](#handlerFor)
@@ -22,42 +20,6 @@ This module provides helpers for patterns regarding *didReplace* and *didUpdate*
   - [ResourceHandler.wereAllReplaced()](#ResourceHandler.wereAllReplaced)
 
 ## Module Members
-
-#### <a id="replaceHandler"></a>replaceHandler( context, modelKey )
-
-Creates and returns a simple handler function for *didReplace* events. Replaces will be written to
-`context.resources` under the given value for `modelKey`.
-
-##### Parameters
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| context | `AxContext` |  the widget context to work on |
-| modelKey | `String` |  the property of `context.resources` the handler writes replaces to |
-
-##### Returns
-
-| Type | Description |
-| ---- | ----------- |
-| `Function` |  the handler function |
-
-#### <a id="updateHandler"></a>updateHandler( context, modelKey )
-
-Creates and returns a simple handler function for *didUpdate* events. Updates will be written to
-`context.resources` under the given value for `modelKey`.
-
-##### Parameters
-
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| context | `AxContext` |  the widget context to work on |
-| modelKey | `String` |  the property of `context.resources` the handler applies updates to |
-
-##### Returns
-
-| Type | Description |
-| ---- | ----------- |
-| `Function` |  the handler function |
 
 #### <a id="replacePublisherForFeature"></a>replacePublisherForFeature( context, featurePath, optionalOptions )
 

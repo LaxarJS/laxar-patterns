@@ -14,7 +14,6 @@ when working with certain common event handling and resource patterns.
 - [flags](#flags)
 - [i18n](#i18n)
 - [json](#json)
-- [patches](#patches)
 - [resources](#resources)
 - [validation](#validation)
 - [visibility](#visibility)
@@ -45,10 +44,6 @@ Convenience for *didChangeLocale* events.
 
 The [json](./lib.json.md) module.
 Helpers for working with rfc-6902 JSON patch data.
-
-#### <a id="patches"></a>patches `Object`
-
-**Deprecated** old-style patch library.
 
 #### <a id="resources"></a>resources `Object`
 

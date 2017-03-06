@@ -17,7 +17,6 @@ import * as errors from './lib/errors';
 import * as flags from './lib/flags';
 import * as i18n from './lib/i18n';
 import * as json from './lib/json';
-import * as patches from './lib/patches';
 import * as resources from './lib/resources';
 import * as validation from './lib/validation';
 import * as visibility from './lib/visibility';
@@ -67,16 +66,6 @@ export {
     * @name json
     */
    json,
-
-   /**
-    * **Deprecated** old-style patch library.
-    *
-    * @deprecated use rfc-6902 JSON patch from {@link json} instead
-    *
-    * @type {Object}
-    * @name patches
-    */
-   patches,
 
    /**
     * The [resources](./lib.resources.md) module.

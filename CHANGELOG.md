@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#79](https://github.com/LaxarJS/laxar-patterns/issues/79): upgraded manuals
 - [#84](https://github.com/LaxarJS/laxar-patterns/issues/84): patches: removed deprecated API
     + **BREAKING CHANGE:** see ticket for details
 - [#85](https://github.com/LaxarJS/laxar-patterns/issues/85): removed `resources.replaceHandler` and `resources.updateHandler`

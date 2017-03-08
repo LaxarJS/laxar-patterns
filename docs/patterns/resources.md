@@ -12,7 +12,7 @@ When using the LaxarJS resource pattern, for a given resource there is usually a
 If applicable, that widget (the _resource master_) is also capable of persisting modifications to the resource.
 The other collaborators are _slaves_ with respect to the shared resource.
 
-Only the resource master may change the _identity_ of a shared resource, while the slaves may only publish _modifications to the state_ of the resource.
+Only the resource master may change the _identity_ of a shared resource, while the slaves may only trigger _modifications to the state_ of the resource.
 
 ### Example: Shopping Cart
 
@@ -39,7 +39,12 @@ Event name                 | Payload Attribute | Type   | Description
                            | `patches`         | array  | A [JSON-Patch](https://tools.ietf.org/html/rfc6902) document (an array representing a sequence of incremental modifications)
 
 Because modifications _(didUpdate)_ are transmitted incrementally, the resource master may use the `patches` attribute of the event payload to persist modifications using an [HTTP PATCH](http://tools.ietf.org/html/rfc5789) request.
-To create and apply patches, you require `laxar-patterns` into your widget controller and use `createPatch` and `applyPatch` its `json` API.
+To create and apply patches, you require `laxar-patterns` into your widget controller and use `createPatch` and `applyPatch` from its `json` API.
+
+In support of a unidirectional data flow we strongly advise to only send updates from the master to the slaves and not the other way around.
+This ensures that there really is only one source for the most recent state of a resource, and changes to it are encapsulated in just one location.
+So instead of sending a _didUpdate_ event a slave expresses its wish to induce a modification on a resource via _takeActionRequest_ to the master.
+The master then can modify the resource accordingly (possibly via server roundtrip) and publish the updated version as a whole via _didReplace_ or partially via _didUpdate_ event.
 
 When sharing resources, keep in mind that resource events (like all LaxarJS events) are cloned for each receiver.
 This makes it easy to write robust applications, but can lead to inefficiencies if very large resources are published.
@@ -120,3 +125,10 @@ The `didSave` event contains information on the _outcome_:
 
 Depending on the use case, widgets might persist resources automatically every time they have been modified.
 In this case, it is recommended for them to still respond to save requests, for best interoperability.
+
+### RESTful State Management
+
+The _saveRequest, willSave_ and _didSave_ events are mainly useful for CRUD driven frontends.
+When building a RESTful application, resources are most probably shared frequently with services, and user interactions very often directly induce a server side effect.
+A dedicated phase for persistence (i.e. saving all relevant resources) is less likely to occur.
+Instead, consistency should somehow be checked before leaving a page, but how that is achieved depends on the functional use case.

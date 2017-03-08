@@ -5,7 +5,7 @@ The LaxarJS Runtime already defines the semantics of [core event patterns](//git
 For application-level events, _LaxarJS Patterns_ provides an additional vocabulary, which may be grouped into a handful of _pattern families_.
 Before starting with the patterns, make sure that you are familiar with the [LaxarJS Core Concepts](//github.com/LaxarJS/laxar/blob/master/docs/concepts.md) and the [LaxarJS events manual](//github.com/LaxarJS/laxar/blob/master/docs/manuals/events.md).
 
-For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](docs/api) as well.
+For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](api) as well.
 
 ## Families of LaxarJS Patterns
 
@@ -30,7 +30,7 @@ The resource patterns cover events starting with the following topics:
   * `didReplace` and `didUpdate`
   * `validateRequest`, `willValidate` and `didValidate`
   * `saveRequest`, `willSave` and `didSave`
-  
+
 [more on resources »](./patterns/resources.md)
 
 
@@ -43,7 +43,7 @@ Widgets may respond using the [_will/did_-mechanism](//github.com/LaxarJS/laxar/
 The actions pattern covers events starting with the following topics:
 
   * `takeActionRequest`, `willTakeAction` and `didTakeAction`
-  
+
 [more on actions »](./patterns/actions.md)
 
 

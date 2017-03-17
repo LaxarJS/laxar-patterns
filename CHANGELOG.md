@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#87](https://github.com/LaxarJS/laxar-patterns/issues/87): removed now obsolete bower.json
 - [#89](https://github.com/LaxarJS/laxar-patterns/issues/89): actions: added `optional` option to `publisherForFeature`
     + NEW FEATURE: see ticket for details
 - [#88](https://github.com/LaxarJS/laxar-patterns/issues/88): flags: empty publisher now returns a resolved promise

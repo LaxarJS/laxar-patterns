@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#88](https://github.com/LaxarJS/laxar-patterns/issues/88): flags: empty publisher now returns a resolved promise
+
 ## v2.0.0-beta.0
 
 - [#79](https://github.com/LaxarJS/laxar-patterns/issues/79): upgraded manuals

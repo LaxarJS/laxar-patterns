@@ -15,8 +15,8 @@ const webpack = require( 'laxar-infrastructure' ).webpack( {
          {
             test: /\.js$/,
             include: [
-               path.resolve( __dirname, 'lib' ),
-               path.resolve( __dirname, 'node_modules/laxar' ),
+               path.resolve( __dirname, 'lib/' ),
+               path.resolve( __dirname, 'node_modules/laxar/' ),
                path.resolve( __dirname, 'node_modules/laxar-patterns.js' )
             ],
             loader: 'babel-loader'

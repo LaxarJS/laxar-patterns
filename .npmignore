@@ -1,5 +1,3 @@
 /.idea
-/.grunt
-/karma-output
-/dist/spec
-/bower_components
+/dist/lib/spec
+/npm-debug.log

@@ -1,11 +1,12 @@
 # LaxarJS Patterns
 
 To allow for widgets to cooperate without tight coupling, it is very useful to share a basic event vocabulary.
-The LaxarJS Runtime already defines the semantics of [core event patterns](//github.com/LaxarJS/laxar/blob/master/docs/manuals/events.md#core-patterns).
+The LaxarJS Runtime already defines the semantics of [core event patterns](https://laxarjs.org/docs/laxar-v2-latest/manuals/events/#core-patterns).
 For application-level events, _LaxarJS Patterns_ provides an additional vocabulary, which may be grouped into a handful of _pattern families_.
-Before starting with the patterns, make sure that you are familiar with the [LaxarJS Core Concepts](//github.com/LaxarJS/laxar/blob/master/docs/concepts.md) and the [LaxarJS events manual](//github.com/LaxarJS/laxar/blob/master/docs/manuals/events.md).
+Before starting with the patterns, make sure that you are familiar with the [LaxarJS Core Concepts](https://laxarjs.org/docs/laxar-v2-latest/concepts/) and the [LaxarJS events manual](https://laxarjs.org/docs/laxar-v2-latest/manuals/events/).
 
 For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](api) as well.
+
 
 ## Families of LaxarJS Patterns
 
@@ -38,7 +39,7 @@ The resource patterns cover events starting with the following topics:
 
 Widgets may publish _requests for action_ to indicate that the user has triggered some functionality outside of their own scope.
 Depending on the page configuration, other widgets will respond to these actions in whatever way is appropriate or configured for them.
-Widgets may respond using the [_will/did_-mechanism](//github.com/LaxarJS/laxar/blob/master/docs/manuals/events.md#request-events), for long running actions.
+Widgets may respond using the [_will/did_-mechanism](https://laxarjs.org/docs/laxar-v2-latest/manuals/events/#request-events), for long running actions.
 
 The actions pattern covers events starting with the following topics:
 

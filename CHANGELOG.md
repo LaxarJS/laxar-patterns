@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#91](https://github.com/LaxarJS/laxar-patterns/issues/91): infrastructure cleanup
 - [#90](https://github.com/LaxarJS/laxar-patterns/issues/90): use `laxar-widget-service-mocks` instead of LaxarJS internals
 
 

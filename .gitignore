@@ -1,8 +1,4 @@
 /.idea
-/node_modules
-/bower_components
 /dist
-/karma-output
-/spec-output
-npm-debug.log
-.sass-cache
+/node_modules
+/npm-debug.log

@@ -6,89 +6,26 @@
 /* eslint-env node */
 
 const path = require( 'path' );
-const webpack = require( 'webpack' );
+const pkg = require( './package.json' );
 
-const nodeEnv = process.env.NODE_ENV;
-const isProduction = nodeEnv === 'production';
-const isBrowserSpec = nodeEnv === 'browser-spec';
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-const baseConfig = {
+const webpack = require( 'laxar-infrastructure' ).webpack( {
+   context: __dirname,
    module: {
       rules: [
          {
             test: /\.js$/,
-            exclude: /(node_modules)\/(?!laxar.*)/,
+            include: [
+               path.resolve( __dirname, 'lib' ),
+               path.resolve( __dirname, 'node_modules/laxar' ),
+               path.resolve( __dirname, 'node_modules/laxar-patterns.js' )
+            ],
             loader: 'babel-loader'
          }
       ]
    }
-};
+} );
 
-const config = isProduction ? distConfig() : baseConfig;
-
-if( isBrowserSpec ) {
-   const WebpackJasmineHtmlRunnerPlugin = require( 'webpack-jasmine-html-runner-plugin' );
-   config.entry = WebpackJasmineHtmlRunnerPlugin.entry( './lib/spec/spec-runner.js' );
-   config.plugins = [
-      new WebpackJasmineHtmlRunnerPlugin()
-   ];
-   config.output = {
-      path: path.resolve( path.join( process.cwd(), 'spec-output' ) ),
-      publicPath: '/spec-output/',
-      filename: '[name].bundle.js'
-   };
-   config.devtool = '#inline-source-map';
-}
-
-module.exports = config;
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-function distConfig() {
-
-   return [
-      distConfigItem( './laxar-patterns.js', 'laxar-patterns.js' ),
-      distConfigItem( './laxar-patterns.js', 'laxar-patterns.min.js', { minify: true } )
-   ];
-
-   function distConfigItem( entry, output, optionalOptions ) {
-      const options = Object.assign( {
-         minify: false,
-         externals: { 'laxar': 'laxar' }
-      }, optionalOptions || {} );
-
-      const config = Object.assign( {}, baseConfig );
-
-      config.entry = entry;
-
-      config.output = {
-         path: path.resolve( __dirname ),
-         filename: `dist/${output}`,
-         library: 'laxar-patterns',
-         libraryTarget: 'umd',
-         umdNamedDefine: true
-      };
-
-      config.externals = options.externals;
-
-      config.plugins = [
-         new webpack.SourceMapDevToolPlugin( {
-            filename: `dist/${output}.map`
-         } )
-      ];
-
-      if( options.minify ) {
-         config.plugins.push(
-            new webpack.optimize.UglifyJsPlugin( {
-               compress: { warnings: false },
-               sourceMap: true
-            } )
-         );
-      }
-
-      return config;
-   }
-
-}
+module.exports = [
+   webpack.library(),
+   webpack.browserSpec( [ `./lib/spec/${pkg.name}.spec.js` ] )
+];

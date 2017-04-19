@@ -1,43 +1,19 @@
-// Karma configuration for LaxarJS core
-/* eslint-env node */
+/**
+ * Copyright 2017 aixigo AG
+ * Released under the MIT license.
+ * http://laxarjs.org/license
+ */
+//* eslint-env node */
+const pkg = require( './package.json' );
+const laxarInfrastructure = require( 'laxar-infrastructure' );
 
-
-const webpackConfig = Object.assign( {}, require('./webpack.config' ) );
-delete webpackConfig.entry;
-delete webpackConfig.plugins;
-webpackConfig.devtool = 'inline-source-map';
-
-module.exports = function(config) {
-   const browsers = [ 'PhantomJS', 'Firefox' ].concat( [
-      process.env.TRAVIS ? 'ChromeTravisCi' : 'Chrome'
-   ] );
-
-   config.set( {
-      frameworks: [ 'jasmine' ],
-      files: [
-         require.resolve( 'laxar/dist/polyfills' ),
-         'lib/spec/spec-runner.js'
-      ],
-      preprocessors: {
-         'lib/spec/spec-runner.js': [ 'webpack', 'sourcemap' ]
-      },
-      webpack: webpackConfig,
-
-      reporters: [ 'progress', 'junit' ],
-      junitReporter: {
-         outputDir: 'karma-output/'
-      },
-      port: 9876,
-      browsers,
-      customLaunchers: {
-         ChromeTravisCi: {
-            base: 'Chrome',
-            flags: [ '--no-sandbox' ]
-         }
-      },
-      browserNoActivityTimeout: 100000,
-      singleRun: true,
-      autoWatch: false,
-      concurrency: Infinity
-   } );
+module.exports = function( config ) {
+   config.set( karmaConfig() );
 };
+
+function karmaConfig() {
+   return laxarInfrastructure.karma( [ `lib/spec/${pkg.name}.spec.js` ], {
+      context: __dirname,
+      module: require( './webpack.config' )[ 0 ].module
+   } );
+}

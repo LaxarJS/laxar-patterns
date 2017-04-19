@@ -1,5 +1,5 @@
 /.idea
 /.grunt
 /karma-output
-/spec-output
+/dist/spec
 /bower_components

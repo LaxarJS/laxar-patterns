@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#90](https://github.com/LaxarJS/laxar-patterns/issues/90): use `laxar-widget-service-mocks` instead of LaxarJS internals
+
 
 ## v2.0.0-beta.1
 

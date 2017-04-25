@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#93](https://github.com/LaxarJS/laxar-patterns/issues/93): documentation: fixed markdown list indent and a link to API 
+
 
 ## v2.0.0-rc.0
 

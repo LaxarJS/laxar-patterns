@@ -17,7 +17,7 @@ Install laxar-patterns into your LaxarJS project using _npm:_
 npm install --save-dev laxar-patterns
 ```
 
-For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](docs/api) as well.
+For efficient usage of the available pattern libraries in your widgets, you should consult the [API docs](docs/api/laxar-patterns) as well.
 
 
 ### Building from Source

@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v2.0.0-rc.2
+
 - [#97](https://github.com/LaxarJS/laxar-patterns/issues/97): fixed dependencies in package.json
 
 

@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#94](https://github.com/LaxarJS/laxar-patterns/issues/94): resources: better error messages for missing feature-config
+
 
 ## v2.0.0-rc.2
 

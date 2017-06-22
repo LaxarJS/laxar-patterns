@@ -18,7 +18,7 @@
     "dist": "npm run apidoc && webpack -p",
     "start": "webpack && webpack-dev-server --inline",
     "karma": "karma start karma.config.js",
-    "eslint": "eslint *.js spec"
+    "eslint": "eslint *.js lib spec"
   },
   "dependencies": {
     "fast-json-patch": "~0.5.2",

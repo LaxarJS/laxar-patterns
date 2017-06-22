@@ -9,7 +9,7 @@
  * The APIs provided by this module usually work on the `AxContext` object of a widget instance, and help
  * when working with certain common event handling and resource patterns.
  *
- * @module laxar-patterms
+ * @module laxar-patterns
  */
 
 import * as actions from './lib/actions';

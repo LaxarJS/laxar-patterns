@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#95](https://github.com/LaxarJS/laxar-patterns/issues/95): documentation: fixed API doc typo
+
 
 ## v2.0.0-rc.2
 

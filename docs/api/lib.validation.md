@@ -15,6 +15,8 @@ Validation messages can have one of the following structures:
 **Module Members**
 
 - [LEVEL_SUCCESS](#LEVEL_SUCCESS)
+- [LEVEL_INFO](#LEVEL_INFO)
+- [LEVEL_WARNING](#LEVEL_WARNING)
 - [LEVEL_ERROR](#LEVEL_ERROR)
 - [successEvent()](#successEvent)
 - [errorEvent()](#errorEvent)
@@ -31,6 +33,14 @@ Validation messages can have one of the following structures:
 #### <a id="LEVEL_SUCCESS"></a>LEVEL_SUCCESS `String`
 
 Constant for the value `"SUCCESS"`, indicating a successful validation outcome.
+
+#### <a id="LEVEL_INFO"></a>LEVEL_INFO `String`
+
+Constant for the value `"INFO"`, indicating a validation outcome with informational messages.
+
+#### <a id="LEVEL_WARNING"></a>LEVEL_WARNING `String`
+
+Constant for the value `"WARNING"`, indicating a validation outcome with warnings.
 
 #### <a id="LEVEL_ERROR"></a>LEVEL_ERROR `String`
 

@@ -12,9 +12,10 @@
     "url": "https://github.com/LaxarJS/laxar-patterns.git"
   },
   "scripts": {
+     "apidoc": "laxar-dox -d docs/api/ --naming-style-package --modules-from-directory lib/ && laxar-dox -d docs/api/ --naming-style-package laxar-patterns.js",
     "prepublish": "npm run dist",
     "test": "npm run karma && npm run eslint",
-    "dist": "webpack -p",
+    "dist": "npm run apidoc && webpack -p",
     "start": "webpack && webpack-dev-server --inline",
     "karma": "karma start karma.config.js",
     "eslint": "eslint *.js spec"

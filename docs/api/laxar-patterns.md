@@ -1,5 +1,5 @@
 
-# <a id="laxar-patterms"></a>laxar-patterms
+# <a id="laxar-patterns"></a>laxar-patterns
 
 Entry point to all laxar patterns APIs.
 The APIs provided by this module usually work on the `AxContext` object of a widget instance, and help

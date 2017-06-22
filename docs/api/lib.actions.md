@@ -48,6 +48,7 @@ Apart from that this function works just like [`#publisher()`](#publisher).
 | feature | `String` |  the feature to take the action name from |
 | _optionalOptions_ | `Object` |  options for the publisher |
 | _optionalOptions.deliverToSender_ | `Boolean` |  the value is forwarded to `eventBus.publishAndGatherReplies`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| _optionalOptions.optional_ | `Boolean` |  if `true`, a missing feature configuration will result in a noop publisher. Else, a missing feature configuration results in a thrown error. Default is `false` |
 | _optionalOptions.timeout_ | `Boolean` |  the value is forwarded to `eventBus.publishAndGatherReplies` as value of `pendingDidTimeout` |
 | _optionalOptions.onSuccess_ | `Function` |  a function that is called when the overall outcome yields [`#OUTCOME_SUCCESS`](#OUTCOME_SUCCESS) |
 | _optionalOptions.onError_ | `Function` |  a function that is called when the overall outcome yields [`#OUTCOME_ERROR`](#OUTCOME_ERROR) |

@@ -13,11 +13,13 @@ The duration can in turn be used by yet other widgets, for example to show a pro
 
 If you are familiar with _[Qt's signal/slot](http://qt-project.org/doc/qt-5/signalsandslots.html)_ mechanism, you may think of an action as the named, asynchronous counterpart to an _n:m_ signal/slot connection.
 
+
 ## Action Requests and Will/Did-Responses
 
 As with [resources](./resources.md), the _page configuration_ determines which widgets share action topics:
 If a widget offers to publish an action, but no topic was configured for that action, it should not publish an event.
 Similarly, if a widget offers to respond to some action, but no topic was configured, it should not subscribe to action requests.
+
 
 ### The _takeActionRequest, willTakeAction_ and _didTakeAction_ Events
 
@@ -25,16 +27,16 @@ A widget (the _action initiator_) may request for action to be taken by publishi
 Collaborators (_action handlers_) capable and configured to perform a corresponding action respond by publishing a `willTakeAction` event.
 After they have completed performing their action, possibly asynchronously, the collaborators publish a `didTakeAction` event.
 
-Event name                         | Payload Attribute  | Type   | Description
------------------------------------|--------------------|--------|------------------------------------------------------------
-`takeActionRequest.{action}`       |                    |        | _published by any widget to request for some action being taken_
-                                   | `action`           | string | the topic through which respondents are connected (used in the payload _as well as_ in the event name)
-                                   | `anchorDomElement` | string | If applicable: the ID of a DOM element where the action originated
-`willTakeAction.{action}`          |                    |        | _published by a widget that is about to perform some action_
-                                   | `action`           | string | _see above_
-`didTakeAction.{action}.{outcome}` |                    |        | _published by a widget that has completed its action_
-                                   | `action`           | string | _see above_
-                                   | `outcome`          | string | `ERROR` or `SUCCESS` (used in the payload _as well as_ in the event name)
+| Event name                         | Payload Attribute  | Type   | Description
+|------------------------------------|--------------------|--------|------------------------------------------------------------
+| `takeActionRequest.{action}`       |                    |        | _published by any widget to request for some action being taken_
+|                                    | `action`           | string | the topic through which respondents are connected (used in the payload _as well as_ in the event name)
+|                                    | `anchorDomElement` | string | If applicable: the ID of a DOM element where the action originated
+| `willTakeAction.{action}`          |                    |        | _published by a widget that is about to perform some action_
+|                                    | `action`           | string | _see above_
+| `didTakeAction.{action}.{outcome}` |                    |        | _published by a widget that has completed its action_
+|                                    | `action`           | string | _see above_
+|                                    | `outcome`          | string | `ERROR` or `SUCCESS` (used in the payload _as well as_ in the event name)
 
 The `anchorDomElement` that can be sent along with the `takeActionRequest ` is useful to display popover hints right next to the UI element that was activated by the user.
 This information exposes implementation details of the sender, so respondents should take care not to modify the sender DOM and not to rely on a specific structure.

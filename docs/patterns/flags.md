@@ -8,6 +8,7 @@ Consumers of flags respond to the state changes: a "save" button should be activ
 
 As with resources and actions, flags are defined by the page configuration.
 
+
 ### The _didChangeFlag_ Event
 
 Widgets that publish boolean state may do so by publishing a `didChangeFlag` event.
@@ -18,10 +19,10 @@ Usually, flag consumers take an arbitrary number of flag topics (configurable as
 Consumers should consider the overall flag state to be true if any of their subscribed flags is _true_.
 If no state as been received yet for a single flag, consumers should consider it to be _false_.
 
-Event name                         | Payload Attribute  | Type    | Description
------------------------------------|--------------------|---------|------------------------------------------------------------
-`didChangeFlag.{flag}.{state}`     |                    |         | _published by any widget to communicate a boolean state_
-                                   | `flag`             | string  | the topic through which flag consumer and producers are connected (used in the payload _as well as_ in the event name)
-                                   | `state`            | boolean | the new state for the flag
+| Event name                         | Payload Attribute  | Type    | Description
+|------------------------------------|--------------------|---------|------------------------------------------------------------
+| `didChangeFlag.{flag}.{state}`     |                    |         | _published by any widget to communicate a boolean state_
+|                                    | `flag`             | string  | the topic through which flag consumer and producers are connected (used in the payload _as well as_ in the event name)
+|                                    | `state`            | boolean | the new state for the flag
 
 Because the flag `state` is encoded in the event name as `"true"` or `"false"`, subscribers can use pattern matching to create two different subscriptions.

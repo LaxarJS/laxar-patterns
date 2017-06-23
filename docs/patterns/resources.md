@@ -14,6 +14,7 @@ The other collaborators are _slaves_ with respect to the shared resource.
 
 Only the resource master may change the _identity_ of a shared resource, while the slaves may only trigger _modifications to the state_ of the resource.
 
+
 ### Example: Shopping Cart
 
 As an example, consider a shopping cart widget that displays a list of _positions_ (articles and quantities) in a web shop application.
@@ -24,19 +25,20 @@ The details widget is a slave, it can only act with respect to the currently sel
 The details widget might even allow to modify the quantity of a given article within the cart, causing the shopping cart to remove a position when its quantity reaches zero.
 However, the slave can never change _which_ position is currently the _selected-position_ .
 
+
 ### The _didReplace_ and _didUpdate_ Events
 
 The identity and initial state of a resource is published through the _didReplace_ event by the resource master.
 Modifications to a resource may be published through the _didUpdate_ event, by master or slaves.
 
-Event name                 | Payload Attribute | Type   | Description
----------------------------|-------------------|--------|-------------------------------------------------------------
-`didReplace.{resource}`    |                   |        | _published by a resource master to define state and identity of a shared resource_
-                           | `resource`        | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
-                           | `data`            | object | the (initial or new) state of the resource
-`didUpdate.{resource}`     |                   |        | _published by a resource master or by its slaves to publish modifications to the state of a shared resource_
-                           | `resource`        | string | _see above_
-                           | `patches`         | array  | A [JSON-Patch](https://tools.ietf.org/html/rfc6902) document (an array representing a sequence of incremental modifications)
+| Event name                 | Payload Attribute | Type   | Description
+|----------------------------|-------------------|--------|-------------------------------------------------------------
+| `didReplace.{resource}`    |                   |        | _published by a resource master to define state and identity of a shared resource_
+|                            | `resource`        | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
+|                            | `data`            | object | the (initial or new) state of the resource
+| `didUpdate.{resource}`     |                   |        | _published by a resource master or by its slaves to publish modifications to the state of a shared resource_
+|                            | `resource`        | string | _see above_
+|                            | `patches`         | array  | A [JSON-Patch](https://tools.ietf.org/html/rfc6902) document (an array representing a sequence of incremental modifications)
 
 Because modifications _(didUpdate)_ are transmitted incrementally, the resource master may use the `patches` attribute of the event payload to persist modifications using an [HTTP PATCH](http://tools.ietf.org/html/rfc5789) request.
 To create and apply patches, you require `laxar-patterns` into your widget controller and use `createPatch` and `applyPatch` from its `json` API.
@@ -60,39 +62,41 @@ Widgets and activities concerned with navigation and persistence should not be e
 To separate these concerns, widgets may issue _requests to validate a resource_ which other widgets may respond to.
 Respondents may choose to validate immediately or asynchronously.
 
+
 ### The _validateRequest, willValidate_ and _didValidate_ Events
 
 A widget may request validation of a resource using a `validateRequest` event.
 Collaborators capable of performing validation on this resource respond by publishing a `willValidate` event.
 After they have performed validation, possibly asynchronously, collaborators publish a `didValidate` event.
 
-Event name                   | Payload Attribute | Type   | Description
------------------------------|-------------------|--------|------------------------------------------------------------
-`validateRequest.{resource}` |                   |        | _published by any widget that requires validation of the given resource_
-                             | `resource`        | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
-`willValidate.{resource}`    |                   |        | _published by a widget that is about to perform validation of the given resource_
-                             | `resource`        | string | _see above_
-`didValidate.{resource}`     |                   |        | _published by a widget that has performed validation of the given resource_
-                             | `resource`        | string | _see above_
-                             | `outcome`         | string | One of `ERROR`, `WARNING`, `INFO` and `SUCCESS`
-                             | `data`            | array  | A list of _validation messages_ for the application user (see below)
+| Event name                   | Payload Attribute | Type   | Description
+|------------------------------|-------------------|--------|------------------------------------------------------------
+| `validateRequest.{resource}` |                   |        | _published by any widget that requires validation of the given resource_
+|                              | `resource`        | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
+| `willValidate.{resource}`    |                   |        | _published by a widget that is about to perform validation of the given resource_
+|                              | `resource`        | string | _see above_
+| `didValidate.{resource}`     |                   |        | _published by a widget that has performed validation of the given resource_
+|                              | `resource`        | string | _see above_
+|                              | `outcome`         | string | One of `ERROR`, `WARNING`, `INFO` and `SUCCESS`
+|                              | `data`            | array  | A list of _validation messages_ for the application user (see below)
+
 
 ### Validation Outcome and Validation Messages
 
 The `didValidate` event contains information on the results of a validation:
 
-  * The _outcome_ determines if validation was successful:
+- The _outcome_ determines if validation was successful:
 
-      + `ERROR`: The resource is in an invalid state. If the receiver would normally persist the resource, it will probably not do so.
-      + `WARNING`: The resource _probably_ contains problems. If the receiver would normally persist the resource, it should probably obtain user confirmation before doing so.
-      + `INFO`: The resource _might_ contain problems or require user intervention. If the receiver would normally persist the resource, it might obtain confirmation or otherwise inform the user.
-      + `SUCCESS`: No problems were found _by the sender_ of the event. If the receiver would normally persist the resource, it should proceed as far as the sender is concerned.
+  - `ERROR`: The resource is in an invalid state. If the receiver would normally persist the resource, it will probably not do so.
+  - `WARNING`: The resource _probably_ contains problems. If the receiver would normally persist the resource, it should probably obtain user confirmation before doing so.
+  - `INFO`: The resource _might_ contain problems or require user intervention. If the receiver would normally persist the resource, it might obtain confirmation or otherwise inform the user.
+  - `SUCCESS`: No problems were found _by the sender_ of the event. If the receiver would normally persist the resource, it should proceed as far as the sender is concerned.
 
-  * The _validation messages_ (`data` array) contains additional details for the user. Each message is an object with at least these attributes:
+- The _validation messages_ (`data` array) contains additional details for the user. Each message is an object with at least these attributes:
 
-      + `htmlMessage`: A validation message for the user (a _string_), to be interpreted as HTML markup
-      + `level`: The severity of this particular vaidation message (a _string_), using the outcomes specified above
-      + `sortKey`: The message priority (a _string_) that should be used for sorting messages lexicographically.
+  - `htmlMessage`: A validation message for the user (a _string_), to be interpreted as HTML markup
+  - `level`: The severity of this particular vaidation message (a _string_), using the outcomes specified above
+  - `sortKey`: The message priority (a _string_) that should be used for sorting messages lexicographically.
 
 [1]: As an exception to this rule, a resource master may perform a (semantic) _overall_ validation after the individual editor widgets had their say.
 
@@ -108,23 +112,24 @@ To request saving a resource, widgets may publish a `saveRequest` event.
 Widgets capable of and configured for persisting the resource respond by publishing a `willSave` event.
 After they have ensured persistence, usually asynchronously, collaborators publish a `didSave` event.
 
-Event name                   | Payload Attribute | Type   | Description
------------------------------|-------------------|--------|------------------------------------------------------------
-`saveRequest.{resource}`     |                   |        | _published by any widget that requires persisting the given resource_
-                             | `resource`        | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
-`willSave.{resource}`        |                   |        | _published by a widget that is about to persist the given resource_
-                             | `resource`        | string | _see above_
-`didSave.{resource}`         |                   |        | _published by a widget after saving the given resource_
-                             | `resource`        | string | _see above_
-                             | `outcome`         | string | `ERROR` or `SUCCESS`
+| Event name  - | Payload Attribute | Type   | Description
+|------------------------------|-------------------|--------|------------------------------------------------------------
+| `saveRequest.{resource}`     |                   |        | _published by any widget that requires persisting the given resource_
+|                              | `resource`        | string | the topic through which the resource is shared (used in the payload _as well as_ in the event name)
+| `willSave.{resource}`        |                   |        | _published by a widget that is about to persist the given resource_
+|                              | `resource`        | string | _see above_
+| `didSave.{resource}`         |                   |        | _published by a widget after saving the given resource_
+|                              | `resource`        | string | _see above_
+|                              | `outcome`         | string | `ERROR` or `SUCCESS`
 
 The `didSave` event contains information on the _outcome_:
 
-  * `ERROR`: The resource could not be saved. The sender should also publish a `didEncounterError` event in this case.
-  * `SUCCESS`: The resource was saved successfully.
+- `ERROR`: The resource could not be saved. The sender should also publish a `didEncounterError` event in this case.
+- `SUCCESS`: The resource was saved successfully.
 
 Depending on the use case, widgets might persist resources automatically every time they have been modified.
 In this case, it is recommended for them to still respond to save requests, for best interoperability.
+
 
 ### RESTful State Management
 

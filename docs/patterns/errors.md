@@ -5,6 +5,7 @@
 Any LaxarJS widget or activity that communicates with the outside world can experience an error condition.
 This can be a an HTTP server that is not reachable anymore, failing to open a WebSocket connection, or an unexpected privilege restriction imposed by the web browser.
 
+
 ### The _didEncounterError_ Event
 
 Widgets may use the `didEncounterError` event to inform about problems from which they cannot recover.
@@ -15,12 +16,12 @@ The `didEncounterError` event is _not_ intended to handle programming errors, su
 Also, it is not intended to inform about invalid user input: 
 Have a look at [resource validation events](./resources.md#validation) instead.
 
-Event name                         | Payload Attribute  | Type    | Description
------------------------------------|--------------------|---------|------------------------------------------------------------
-`didEncounterError.{code}`         |                    |         | _published by any widget to indicate an unrecoverable error_
-                                   | `code`             | string  | `HTTP_GET` or `HTTP_PUT` (if applicable)
-                                   | `message`          | string  | a more precise description of the problem
-                                   | `data`             | object  | additional details, specific to the problem
+| Event name                         | Payload Attribute  | Type    | Description
+|------------------------------------|--------------------|---------|------------------------------------------------------------
+| `didEncounterError.{code}`         |                    |         | _published by any widget to indicate an unrecoverable error_
+|                                    | `code`             | string  | `HTTP_GET` or `HTTP_PUT` (if applicable)
+|                                    | `message`          | string  | a more precise description of the problem
+|                                    | `data`             | object  | additional details, specific to the problem
 
 The `code` values stand representative for any _read_ and _write_, or _(I/O)_ problems.
 If necessary, a sub-topic can be added, for example `HTTP_PUT-WEB_SOCKET`.

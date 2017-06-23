@@ -2,6 +2,7 @@
 
 ## Last Changes
 
+- [#96](https://github.com/LaxarJS/laxar-patterns/issues/96): documentation: improved Markdown syntax
 - [#94](https://github.com/LaxarJS/laxar-patterns/issues/94): resources: better error messages for missing feature-config
 - [#95](https://github.com/LaxarJS/laxar-patterns/issues/95): documentation: fixed API doc typo
 

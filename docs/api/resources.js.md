@@ -38,7 +38,7 @@ Creates and returns a simple handler function for didReplace events. Replaces wi
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | context | `Object` |  the context the handler works on |
-| modelKey | `String` |  the property of `context,resources` the handler writes replaces to |
+| modelKey | `String` |  the property of `context.resources` the handler writes replaces to |
 
 ##### Returns
 | Type | Description |
@@ -204,7 +204,7 @@ patterns.resources,handlerFor( $scope )
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | featurePath | `String` |  the attribute path to the feature for the resource |
-| _optionalOptions_ | `Object` |  options and callbacks to use |
+| _optionalOptions_ | `Object`, `Function` |  options and callbacks to use. If a function is passed, it is used as the `onUpdateReplace` option. |
 | _optionalOptions.onReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first the second time a didReplace event occurs |
 | _optionalOptions.onUpdate_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate event is received. Each function receives the event object as argument |
 | _optionalOptions.onUpdateReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate or a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first for didReplace events the second time such an event occurs |
@@ -225,7 +225,7 @@ written to `context.resources`.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | resource | `String` |  the resource the handler should be registered for |
-| _optionalOptions_ | `Object` |  options and callbacks to use |
+| _optionalOptions_ | `Object`, `Function` |  options and callbacks to use. If a function is passed, it is used as the `onUpdateReplace` option. |
 | _optionalOptions.onReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first the second time a didReplace event occurs |
 | _optionalOptions.onUpdate_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate event is received. Each function receives the event object as argument |
 | _optionalOptions.onUpdateReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate or a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is only called first for didReplace events the second time such an event occurs |

@@ -9,6 +9,7 @@ This module provides helpers for patterns regarding *takeActionRequest*, *willTa
 **Module Members**
 - [publisherForFeature](#publisherForFeature)
 - [publisher](#publisher)
+- [connectPublisherToFeature](#connectPublisherToFeature)
 - [handlerFor](#handlerFor)
 
 **Types**
@@ -30,6 +31,7 @@ Apart from that this function works just like [publisher](#publisher).
 | feature | `String` |  the feature to take the action name from |
 | _optionalOptions_ | `Object` |  options for the publisher |
 | _optionalOptions.deliverToSender_ | `Boolean` |  the value is forward to `eventBus.publishAndGatherReplies`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| _optionalOptions.timeout_ | `Boolean` |  the value is forwarded to `eventBus.publishAndGatherReplies` as value of `pendingDidTimeout` |
 | _optionalOptions.onSuccess_ | `Function` |  a function that is called when the overall outcome yields "SUCCESS" |
 | _optionalOptions.onError_ | `Function` |  a function that is called when the overall outcome yields "ERROR" |
 | _optionalOptions.onComplete_ | `Function` |  a function that is called always, independently of the overall outcome |
@@ -67,6 +69,7 @@ $button.on( 'click', publisher );
 | action | `String` |  the action to publish on call of the publisher |
 | _optionalOptions_ | `Object` |  options for the publisher |
 | _optionalOptions.deliverToSender_ | `Boolean` |  the value is forward to `eventBus.publishAndGatherReplies`: if `true` the event will also be delivered to the publisher. Default is `false` |
+| _optionalOptions.timeout_ | `Boolean` |  the value is forwarded to `eventBus.publishAndGatherReplies` as value of `pendingDidTimeout` |
 | _optionalOptions.onSuccess_ | `Function` |  a function that is called when the overall outcome yields "SUCCESS" |
 | _optionalOptions.onError_ | `Function` |  a function that is called when the overall outcome yields "ERROR" |
 | _optionalOptions.onComplete_ | `Function` |  a function that is called always, independently of the overall outcome |
@@ -75,6 +78,20 @@ $button.on( 'click', publisher );
 | Type | Description |
 | ---- | ----------- |
 | `Function` |  the publisher as described above |
+
+#### <a name="connectPublisherToFeature"></a>connectPublisherToFeature( scope, feature, optionalOptions )
+Creates an action publisher for a given feature and makes it available as a scope/context property.
+
+The publisher is created under ``scope[ `actions.${feature}` ]``, where `scope` and `feature`
+are the arguments passed to this function. If an action topic has been configured for the given feature,
+the action publisher is created using `publisherForFeature`. Otherwise, it is a noop-function.
+
+##### Parameters
+| Property | Type | Description |
+| -------- | ---- | ----------- |
+| scope | `Object` |  the scope/context to connect to. Needs at least an EventBus instance as `eventBus` property |
+| feature | `String` |  the feature to take the action name from |
+| _optionalOptions_ | `Object` |  options for the publisher, as documented under `publisherForFeature` |
 
 #### <a name="handlerFor"></a>handlerFor( scope )
 Creates a new action handler instance for `takeActionRequest` events. It handles sending of an optional

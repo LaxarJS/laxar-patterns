@@ -47,7 +47,7 @@ influencing a different aspect of this feature.
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | featurePath | `String` |  the attribute path to the configured flag(s) within the feature map |
-| _optionalOptions_ | `Object` |  options and callbacks to use |
+| _optionalOptions_ | `Object`, `Function` |  options and callbacks to use. If a function is passed, it is used as the `onChange` option. |
 | _optionalOptions.initialState_ | `Boolean` |  the optional initial state of the accumulated state. If not given each non-inverted flag is initially assumed to be `false` and `true`, if it is inverted |
 | _optionalOptions.onChange_ | `Function`, `Array.<Function>` |  a function or a list of functions to call whenever the accumulated state of the flags changes. It receives the new state as first argument and its previous state as second argument |
 | _optionalOptions.scopeKey_ | `String` |  the key to set the current accumulated state on in the scope. If not given, nothing happens. For example `flags.myFlag` would set `scope.flags.myFlag` to the currently valid accumulated state |
@@ -69,7 +69,7 @@ The new accumulated state is set on `scope.flags` if that is defined. Otherwise 
 | Property | Type | Description |
 | -------- | ---- | ----------- |
 | possibleFlags | `String`, `Array.<String>` |  one or a list of flags to watch |
-| _optionalOptions_ | `Object` |  options and callbacks to use |
+| _optionalOptions_ | `Object`, `Function` |  options and callbacks to use. If a function is passed, it is used as the `onChange` option. |
 | _optionalOptions.initialState_ | `Boolean` |  the optional initial state of the accumulated state. If not given each non-inverted flag is initially assumed to be `false` and `true`, if it is inverted |
 | _optionalOptions.onChange_ | `Function`, `Array.<Function>` |  a function or a list of functions to call whenever the accumuated state of the flags changes. It receives the new state as first argument and its previous state as second argument |
 | _optionalOptions.scopeKey_ | `String` |  the key to set the current accumulated state on in the scope. If not given, nothing happens. For example `flags.myFlag` would set `scope.flags.myFlag` to the currently valid accumulated state |

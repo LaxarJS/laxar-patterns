@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v1.3.0
+
 - [#83](https://github.com/LaxarJS/laxar-patterns/issues/83): actions: added missing api doc for timeout
 - [#66](https://github.com/LaxarJS/laxar-patterns/issues/66): actions: added convenience method `connectPublisherToFeature`
     + NEW FEATURE: see ticket for details

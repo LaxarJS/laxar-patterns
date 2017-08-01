@@ -8,7 +8,7 @@ This module provides helpers for patterns regarding *didReplace* and *didUpdate*
 **Module Members**
 
 - [replacePublisherForFeature()](#replacePublisherForFeature)
-- [updatePublisherForFeature()](#updatePublisherForFeature)
+- [updatePublisherForFeature() **(Deprecated)**](#updatePublisherForFeature)
 - [handlerFor()](#handlerFor)
 
 **Types**
@@ -28,6 +28,11 @@ configuration. Resolution of the `featurePath` argument works just as explained 
 [`#ResourceHandler.registerResourceFromFeature`](#ResourceHandler.registerResourceFromFeature). The publisher returns the promise returned by
 the underlying event bus call.
 
+By default a handler for `replaceRequest` events of the underlying resource is added. This handler
+caches the most recently published version of a resource and publishes it again, if a `replaceRequest`
+event for this resource is received. Note that eny changes imposed on the resource via `didUpdate` events
+are ignored and won't be reflected on the cached resource.
+
 ##### Parameters
 
 | Property | Type | Description |
@@ -37,6 +42,7 @@ the underlying event bus call.
 | _optionalOptions_ | `Object` |  options for the publisher |
 | _optionalOptions.deliverToSender_ | `Boolean` |  the value is forwarded to `eventBus.publish`: if `true` the event will also be delivered to the publisher. Default is `false` |
 | _optionalOptions.isOptional_ | `Boolean` |  if `true`, a missing `featurePath.resource` is ignored and the returned publisher won't do anything when called. Default is `false`. |
+| _optionalOptions.replaceRequestHandler_ | `Function`, `Boolean` |  if `false`, replace request support is disabled. if `true`, `replaceRequest` events are automatically handled by using an internal cache for the last version of the resource. If a function is provided, internal caching is disabled, and instead the given handler is asked to return a promise for the resource to publish. Default is `true`. |
 
 ##### Returns
 
@@ -45,6 +51,14 @@ the underlying event bus call.
 | `Function` |  the publisher function. Takes the data to publish as single argument |
 
 #### <a id="updatePublisherForFeature"></a>updatePublisherForFeature( context, featurePath, optionalOptions )
+
+**Deprecated:**
+
+> In practice updates as a resource pattern turned out to be rather error prone and difficult to manage
+   correctly. In our experience sending the complete resource via `didReplace` on change again is much
+   simpler and removes potential overhead while calculating the patches. You may still use `didUpdate`
+   events in your application, but pattern support will be dropped without replacement, probably in the
+   next major release.
 
 Creates and returns a function to publish *didUpdate* events for the resource found as feature
 configuration. Resolution of the `featurePath` argument works just as explained in the documentation for

@@ -1,6 +1,6 @@
 {
   "name": "laxar-patterns",
-  "version": "2.0.0",
+  "version": "2.1.0-pre",
   "description": "Utilities to implement standard event patterns in LaxarJS widgets",
   "homepage": "http://laxarjs.org",
   "main": "laxar-patterns.js",
@@ -32,7 +32,7 @@
     "cross-env": "^3.1.4",
     "eslint": "^3.19.0",
     "karma": "^1.5.0",
-    "laxar-dox": "^2.0.0",
+    "laxar-dox": "^2.1.0",
     "laxar-infrastructure": "^2.0.0",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.2"

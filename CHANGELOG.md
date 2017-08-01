@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+- [#86](https://github.com/LaxarJS/laxar-patterns/issues/86): resources: implemented support for replaceRequest events
+    + NEW FEATURE: see ticket for details
+
 
 ## v2.0.0
 

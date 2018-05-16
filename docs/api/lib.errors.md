@@ -56,6 +56,7 @@ publisher( 'HTTP_GET', 'failureMessage', {
 | featurePath | `String` |  the configuration path for (i18n) error-messages to publish |
 | _options_ | `Object` |  an optional object with additional configuration |
 | _options.localizer_ | `Function` |  a function such as `i18nHandler.localize` to prepare messages |
+| _options.formatter_ | `Function` |  a `laxar.string.format`-compatible function to interpolate message arguments |
 
 ##### Returns
 

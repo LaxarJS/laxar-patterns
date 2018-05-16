@@ -170,7 +170,7 @@ resources.handlerFor( context )
 | _optionalOptions.onUpdate_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate event is received. Each function receives the event object as argument |
 | _optionalOptions.onUpdateReplace_ | `Function`, `Array.<Function>` |  a function or a list of functions to call when a didUpdate or a didReplace event is received. Each function receives the event object as argument. If `options.omitFirstReplace` is `true`, it is not called for the first received didReplace event |
 | _optionalOptions.omitFirstReplace_ | `Boolean` |  if `true` `options.onReplace` is only called after the first time a didReplace event occurred. Default is `false` |
-| _optionalOptions.modelKey_ | `String` |  the key to use for the resource in `context.resources`. If not given the last path fragment of `featurePath` is used. For example if the path is `myfeature.superResource` the key will be `superResource` |
+| _optionalOptions.modelKey_ | `String` |  the key to use for the resource in `context.resources`. If not given the last path fragment of `featurePath` is used. For example if the path is `myFeature.superResource` the key will be `superResource` |
 | _optionalOptions.isOptional_ | `Boolean` |  if set to `true`, missing configuration for this resource is silently ignored and no handlers are registered. If set to `false`, an error will be raised in this case (default is `false`) |
 
 ##### Returns

@@ -2,6 +2,9 @@
 
 ## Last Changes
 
+
+## v2.1.0-rc.0
+
 - [#99](https://github.com/LaxarJS/laxar-patterns/issues/99): errors: allow to pass custom message formatter
     + NEW FEATURE: see ticket for details
 - [#86](https://github.com/LaxarJS/laxar-patterns/issues/86): resources: implemented support for replaceRequest events

@@ -2,6 +2,8 @@
 
 ## Last Changes
 
+- [#100](https://github.com/LaxarJS/laxar-patterns/issues/100): updated dependencies
+
 
 ## v2.1.0-rc.0
 
